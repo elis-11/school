@@ -1,8 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import NavMain from "./components/NavMain";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Home from "./components/Home";
+import PageHome from "./components/PageHome";
+import PageProjects from "./components/PageProjects";
+import PageSkills from "./components/PageSkills";
+import PageAbout from "./components/PageAbout";
+import Contact from "./components/PageContact";
 import "./App.scss";
 
 function App() {
@@ -10,9 +12,11 @@ function App() {
     <div className="App">
       <NavMain />
       <Routes>
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<PageAbout />} />
+        <Route path="/skills" element={<PageSkills />} />
+        <Route path="/projects" element={<PageProjects />} />
+        <Route path="/" element={<PageHome />} />
       </Routes>
     </div>
   );

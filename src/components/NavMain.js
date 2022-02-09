@@ -15,6 +15,22 @@ const NavMain = () => {
         </li>
         <li>
           <NavLink
+            to="/projects"
+            className={(navData) => (navData.isActive ? "active" : "none")}
+          >
+            Projects
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/skills"
+            className={(navData) => (navData.isActive ? "active" : "none")}
+          >
+            Skills
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
             to="/about"
             className={(navData) => (navData.isActive ? "active" : "none")}
           >
@@ -23,10 +39,10 @@ const NavMain = () => {
         </li>
         <li>
           <NavLink
-            to="/projects"
+            to="/contact"
             className={(navData) => (navData.isActive ? "active" : "none")}
           >
-            Projects
+            Contact
           </NavLink>
         </li>
       </ul>
