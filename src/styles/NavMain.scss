@@ -1,0 +1,9 @@
+.nav-main {
+  ul {
+    display: flex;
+
+    .active {
+      color: rgb(134, 133, 133);
+    }
+  }
+}
