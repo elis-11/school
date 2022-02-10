@@ -8,7 +8,7 @@
     background-color: rgb(8, 0, 0);
     text-align: center;
     .logo {
-      height: 20vh;
+      height: 30vh;
       font-family: serif;
       font-size: 2vw;
       h1 {
@@ -30,33 +30,43 @@
       }
     }
     .links {
-      height: 70vh;
+      height: 60vh;
       display: column;
     }
     ul {
-      display: flex;
+      display: column;
       li {
+        margin-bottom: 2vh;
         color: rgb(197, 38, 38);
         :hover {
-          color: rgb(201, 198, 198);
+          color: rgb(238, 237, 237);
         }
-
+        
         .active {
-          color: rgb(134, 133, 133);
+          color: rgb(247, 245, 245);
+        }
+        a{
+          text-decoration: none;
+          color: rgb(168, 167, 167);
+          font-size: 1.5vw;
         }
       }
     }
     .item_icon {
       display: flex;
-      width: 2vw;
-      height: 2vh;
-      border: 1px solid rgb(163, 152, 152);
-      transition: background 0.1s linear;
+      // width: 2.3vw;
+      // height: 2vh;
 
+      transition: background 0.1s linear;
+      
       .icon {
         height: 10vh;
-        font-size: 2.1vw;
+        font-size: 2vw;
+        width: 2.5vw;
+        height: 2.5vh;
+        border: 1px solid rgb(163, 152, 152);
         :hover {
+          font-size: 2vw;
           background-color: rgb(172, 178, 184);
           transition: fill 0.1s linear;
           fill: rgb(238, 217, 217);

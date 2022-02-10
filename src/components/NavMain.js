@@ -55,18 +55,25 @@ const NavMain = () => {
                 Contact
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/todos"
+                className={(navData) => (navData.isActive ? "active" : "none")}
+              >
+                Todos
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="item_icon">
-          <div className="icon">
-            <FaLinkedin
+          <FaLinkedin
             // onClick={() => handleClickButton(item.id)}
             // role="button"
             // tabIndex="0"
-            />
-            <FaGithub />
-            <FaInfoCircle />
-          </div>
+            className="icon"
+          />
+          <FaGithub className="icon" />
+          <FaInfoCircle className="icon" />
         </div>
       </div>
     </nav>

@@ -4,7 +4,8 @@ import PageHome from "./components/PageHome";
 import PageProjects from "./components/PageProjects";
 import PageSkills from "./components/PageSkills";
 import PageAbout from "./components/PageAbout";
-import Contact from "./components/PageContact";
+import PageContact from "./components/PageContact";
+import PageTodos from "./components/PageTodos";
 import "./App.scss";
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
     <div className="App">
       <NavMain />
       <Routes>
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<PageContact />} />
+        <Route path="/todos" element={<PageTodos />} />
         <Route path="/about" element={<PageAbout />} />
         <Route path="/skills" element={<PageSkills />} />
         <Route path="/projects" element={<PageProjects />} />
