@@ -13,4 +13,111 @@
       color: rgb(194, 69, 69);
     }
   }
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 100px;
+    .intro_inner {
+      width: 100%;
+      max-width: 80%;
+      text-align: left;
+      margin-left: 13%;
+      .intro_title {
+        margin: 0 0 30px;
+        font-family: serif;
+        font-size: 65px;
+        line-height: 1.1;
+        /* color: #7e7c7c; */
+        font-weight: 700;
+        /* text-transform: uppercase; */
+      }
+      .expert {
+        font-size: 20px;
+        color: rgb(100, 98, 98);
+        font-family: fantasy;
+        padding: 0.5 em;
+        margin: 1em 0;
+      }
+      .btn {
+        /* display: inline-block; */
+        /* vertical-align: top; */
+        padding: 10px 15px;
+        margin-bottom: 50px;
+        border: 1px solid #08fdd8;
+        font-size: 14px;
+        font-weight: 700;
+        color: #08fdd8;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        background-color: #08fdd8;
+        color: #1d1d1d;
+      }
+
+      .intro_subtitle {
+        margin-bottom: 60px;
+        font-size: 22px;
+        color: rgb(80, 79, 79);
+        line-height: 1.5;
+        font-weight: 400;
+      }
+    }
+    .slider {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      text-align: center;
+      .container {
+        /* width: 100%; */
+        max-width: 70%;
+        margin: 0 auto;
+        padding: 0 15px;
+        .slider_inner {
+          display: flex;
+          justify-content: space-between;
+          a {
+            width: 20%;
+            padding: 10px 0;
+            position: relative;
+            border-top: 3px solid rgb(224, 220, 224);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fcfcfc;
+            a:active {
+              opacity: 1;
+              .box {
+                border: none;
+              }
+              a:hover:after,
+              a.active:after {
+                display: block;
+                opacity: 1;
+              }
+              a:active {
+                color: rgb(241, 240, 240);
+              }
+
+              .slider_item.active:before {
+                content: "";
+                display: block;
+                width: 20%;
+                height: 3px;
+                position: absolute;
+                top: -3px;
+                left: 0;
+                z-index: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
