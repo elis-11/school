@@ -1,4 +1,4 @@
-import "../styles/PageAbout.scss";
+import "../styles/About.scss";
 
 const PageAbout = () => {
   return (

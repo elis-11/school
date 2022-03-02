@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/PageTodos.scss"
+import "../styles/Todos.scss"
 
 const Todos = () => {
   return (

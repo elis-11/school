@@ -1,4 +1,4 @@
-import "../styles/PageSkills.scss";
+import "../styles/Skills.scss";
 
 const PageSkills = () => {
   return (

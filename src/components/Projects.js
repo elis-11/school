@@ -1,4 +1,4 @@
-import "../styles/PageProjects.scss";
+import "../styles/Projects.scss";
 
 const PageProjects = () => {
   return (
