@@ -4,9 +4,8 @@ const PageHome = () => {
   return (
     <div className="page-home">
       <div className="intro" id="home">
-        <p className="tag1">&#8249html&#8250</p>
-        <p className="tag1">&#8249body&#8250</p>
-        {/* <p className="tag1">&#8249section&#8250</p>  */}
+        <p className="tag1">{`<html>`}</p>
+        <p className="tag1">{`body`}</p>
 
         <div className="intro_inner">
           <h2 className="intro_title">
@@ -21,48 +20,35 @@ const PageHome = () => {
             My Projects
           </a>
         </div>
-        <p className=" tag2 tag1">&#8249div&#8250</p>
-        <p className="tag1">&#8249header&#8250</p>
+        <p className=" tag2 tag1">{`<div>`}</p>
+        <p className="tag1">{`<header>`}</p>
         <div className="slider">
           <div className="container">
-            <p className="tag5">&#8249br&#8250</p>
+            <p className="tag5">{`<br>`}</p>
             <div className="slider_inner">
               <div className="slider_item active">
                 <a
-                  className="box nav_link"
+                  className="box"
                   href="https://github.com/elis-11/"
-                  target="blank"
-                >
+                  target="blank">
                   {" "}
                   Github
                 </a>
               </div>
               <div className="slider_item">
-                <a
-                  className="box nav_link"
-                  href="https://linkedin.com/"
-                  target="blank"
-                >
+                <a className="box" href="https://linkedin.com/" target="blank">
                   {" "}
                   Linkedin
                 </a>
               </div>
               <div className="slider_item">
-                <a
-                  className="box nav_link"
-                  href="https://xing.com/"
-                  target="blank"
-                >
+                <a className="box" href="https://xing.com/" target="blank">
                   {" "}
                   XING
                 </a>
               </div>
               <div className="slider_item">
-                <a
-                  className="box nav_link"
-                  href="https://facebook.com/"
-                  target="blank"
-                >
+                <a className="box" href="https://facebook.com/" target="blank">
                   {" "}
                   Facebook
                 </a>
