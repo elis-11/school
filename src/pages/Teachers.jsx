@@ -1,4 +1,5 @@
 import React from "react";
+import "./../components/teachers/Teachers.scss";
 
 export const Teachers = () => {
   return (

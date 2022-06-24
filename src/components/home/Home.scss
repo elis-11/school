@@ -1,0 +1,85 @@
+.home {
+  display: column;
+  justify-content: center;
+  place-items: center;
+  width: 100%;
+  .intro {
+    display: flex;
+    width: 70%;
+    margin-left: 10%;
+    .input {
+      margin-top: 100px;
+      display: column;
+      width: 100%;
+      h2 {
+        color: rgb(95, 95, 95);
+        font-size: 2.2rem;
+        font-weight: normal;
+      }
+      h4 {
+        color: rgb(95, 95, 95);
+        margin: 50px;
+      }
+      .buttons {
+        display: flex;
+        place-items: center;
+        margin: 4rem 5rem;
+        .courses {
+          width: 9rem;
+          height: 2.5rem;
+          margin-left: 1em;
+          border-radius: 2rem;
+          color: white;
+          background-color: rgb(207, 207, 207);
+        }
+        .apply {
+          width: 9rem;
+          height: 2.5rem;
+          margin-left: 1em;
+          border-radius: 2rem;
+          color: rgb(163, 162, 162);
+          background-color: rgb(252, 251, 251);
+        }
+      }
+    }
+    .card {
+      width: 40%;
+    }
+  }
+  .career {
+    display: column;
+    margin: 5rem;
+    color: rgb(95, 95, 95);
+    h2 {
+      font-size: 2rem;
+      font-weight: normal;
+    }
+    h5 {
+      font-weight: normal;
+    }
+    .news {
+      display: flex;
+      width: 100%;
+      .good {
+        width: 40%;
+      }
+      .great {
+        width: 40%;
+      }
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .card{
+        width: 15%;
+        padding: 1.6em;
+        margin: .7em;
+        box-shadow: none;
+        .title{
+
+        }
+      }
+    }
+  }
+}
