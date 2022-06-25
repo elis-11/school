@@ -1,4 +1,10 @@
-import React from "react";
+import { FaLaptopHouse } from "react-icons/fa";
+import { FaHandshake } from "react-icons/fa";
+import { FaBullseye } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa";
+import { SiTesla } from "react-icons/si";
+import { SiZalando } from "react-icons/si";
+import { FiFacebook } from "react-icons/fi";
 import "../components/home/Home.scss";
 
 export const Home = () => {
@@ -18,6 +24,17 @@ export const Home = () => {
           </div>
           <div className="graduates">
             <p>Our graduates now work at:</p>
+            <div className="brands">
+              <div className="icon">
+                <SiTesla />
+              </div>
+              <div className="icon">
+                <FiFacebook />
+              </div>
+              <div className="icon">
+                <SiZalando />
+              </div>
+            </div>
           </div>
         </div>
         <div className="card">
@@ -50,37 +67,122 @@ export const Home = () => {
               work from anywhere, even if you have zero experience.
             </h5>
           </div>
+        </div>
+        <div className="cards">
+          <div className="card">
+            <div className="icon">
+              <FaLaptopHouse />
+            </div>
+            <div className="title">Hybrid learning experience</div>
+            <p>
+              Take advantage of a unique mix of remote learning and an in-depth
+              campus project phase.
+            </p>
           </div>
-          <div className="cards">
-            <div className="card">
-              <div className="title">Hybrid learning experience</div>
-              <p>
-                Take advantage of a unique mix of remote learning and an
-                in-depth campus project phase.
-              </p>
+          <div className="card">
+            <div className="icon">
+              <FaLaptopCode />
             </div>
-            <div className="card">
-              <div className="title">Live and interactive online classes</div>
-              <p>
-                Enjoy hands-on instructor-led classes, workshops, team
-                challenges and much more.
-              </p>
+            <div className="title">Live and interactive online classes</div>
+            <p>
+              Enjoy hands-on instructor-led classes, workshops, team challenges
+              and much more.
+            </p>
+          </div>
+          <div className="card">
+            <div className="icon">
+              <FaBullseye />
             </div>
-            <div className="card">
-              <div className="title">Build a job-ready portfolio</div>
-              <p>
-                And enjoy personalized career support along the way to nail your
-                job interview.
-              </p>
+            <div className="title">Build a job-ready portfolio</div>
+            <p>
+              And enjoy personalized career support along the way to nail your
+              job interview.
+            </p>
+          </div>
+          <div className="card">
+            <div className="icon">
+              <FaHandshake />
             </div>
-            <div className="card">
-              <div className="title">
-                Get hired with our Job Guarantee
+            <div className="title">Get hired with our Job Guarantee</div>
+            <p>
+              Find a job in 6 months or get your money back. <br /> *Conditions
+              apply
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="discover">
+        <h2>DISCOVER OUR COURSES</h2>
+        <div className="cards">
+          <div className="card design">
+            <img src="//source.unsplash.com/250x150/?" alt="card"/>
+            <div className="title">
+              <h3>
+                DIGITAL PRODUCT <br /> DESIGN
+              </h3>
+            </div>
+            <div className="available">
+              <p>Available in:</p>
+              <div className="language">
+                <button className="english">English</button>
+                <button className="german">German</button>
               </div>
-              <p>Find a job in 6 months or get your money back. <br /> *Conditions apply</p>
+              <p>
+                Understand what drives people's decisions. Master UX Research,
+                UI Design, and help digital business with creative
+                problem-solving.
+              </p>
+              <button>Explore course</button>
+              <br />
+              <a href="/students">Or apply now</a>
+            </div>
+          </div>
+          <div className="card data">
+          <img src="//source.unsplash.com/250x150/?" alt="card"/>
+            <div className="title">
+              <h3>
+                DATA SCIENCE <br /> <div className="tralala">TRALALA</div>
+              </h3>
+            </div>
+            <div className="available">
+              <p>Available in:</p>
+              <div className="language">
+                <button className="english">English</button>
+                <button className="german">German</button>
+              </div>
+              <p>
+                Unlock your data genius. Learn SQL, Python and Machine Learning
+                to help companies discover their greatest opportunities.
+              </p>
+              <button>Explore course</button>
+              <br />
+              <a href="/students">Or apply now</a>
+            </div>
+          </div>
+          <div className="card web">
+          <img src="//source.unsplash.com/250x150/?" alt="card"/>
+            <div className="title">
+              <h3>
+                WEB & APP <br /> DEVELOPMENT{" "}
+              </h3>
+            </div>
+            <div className="available">
+              <p>Available in:</p>
+              <div className="language">
+                <button className="english">English</button>
+                <button className="german">German</button>
+              </div>
+              <p>
+                Shape the future with coding. Learn how to create functional
+                websites and applications that others can only dream about.{" "}
+              </p>
+              <button>Explore course</button>
+              <br />
+              <a href="/students">Or apply now</a>
             </div>
           </div>
         </div>
+      </div>
     </div>
   );
 };

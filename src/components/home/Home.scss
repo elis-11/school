@@ -39,6 +39,25 @@
           border-radius: 2rem;
           color: rgb(163, 162, 162);
           background-color: rgb(252, 251, 251);
+          &:hover {
+            background-color: rgb(207, 207, 207);
+          }
+        }
+      }
+      .graduates {
+        display: flex;
+        .brands {
+          display: flex;
+          justify-content: center;
+          p {
+            width: 50%;
+            font-size: 2rem;
+          }
+          .icon {
+            width: 40%;
+            font-size: 2rem;
+            margin: 20px;
+          }
         }
       }
     }
@@ -59,6 +78,7 @@
     }
     .news {
       display: flex;
+      justify-content: center;
       width: 100%;
       .good {
         width: 40%;
@@ -71,14 +91,96 @@
       display: flex;
       justify-content: center;
       width: 100%;
-      .card{
-        width: 15%;
+      .card {
+        width: 20%;
         padding: 1.6em;
-        margin: .7em;
-        box-shadow: none;
-        .title{
+        margin: 0.7em;
+        border-radius: 1rem;
+        -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
 
+        -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+
+        .icon {
+          font-size: 3rem;
         }
+        .title {
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  .discover {
+    display: column;
+    width: 100%;
+    .cards {
+      display: flex;
+      justify-content: center;
+      .card {
+        display: column;
+        width: 20%;
+        margin: 1rem;
+        padding: 2em;
+        border-radius: 2rem;
+        -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+
+        -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+        &:hover {
+          -webkit-box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
+            inset -15px -15px 20px #fff;
+
+          -moz-box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
+            inset -15px -15px 20px #fff;
+
+          box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
+            inset -15px -15px 20px #fff;
+        }
+        .tralala {
+          opacity: 0;
+        }
+        .language {
+          display: flex;
+          justify-content: center;
+          button {
+            width: 5rem;
+            width: 5rem;
+            height: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            margin: .3rem;
+            -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+
+            -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+    
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+    
+          }
+        }
+        button {
+            width: 9rem;
+            height: 2.5rem;
+            margin-left: 1em;
+            border-radius: 2rem;
+            color: rgb(163, 162, 162);
+            background-color: rgb(252, 251, 251);
+            margin-bottom: 1rem;
+            &:hover {
+              background-color: rgb(207, 207, 207);
+          }
+        }
+  a{
+    color: rgb(163, 162, 162);
+    &:hover {
+      color: white;
+    }
+  }
       }
     }
   }

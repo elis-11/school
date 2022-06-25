@@ -15,6 +15,10 @@ nav {
     color: grey;
     text-decoration: none;
     font-weight: bold;
+    &:hover {
+      color: white;
+    }
+
   }
   .apply {
     display: flex;
