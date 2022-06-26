@@ -239,7 +239,7 @@ export const Home = () => {
             <div className="icon">
               <FiUsers />
             </div>
-            <a href="/courses">1 on 1 help</a>
+            <a href="/courses">1 on 1 help when you need it</a>
             <p>
               {" "}
               Whenever you need extra help, feel stuck or like you’re falling
@@ -252,7 +252,7 @@ export const Home = () => {
         <div className="instructors">
           <div className="card">
             <img src="images/cards/person008.jpg" alt="card" />
-            <h3> LEAD INSTRUCTORS </h3>
+            <a href="/teachers"> LEAD INSTRUCTORS </a>
             <p>
               Responsible for teaching you all the relevant skills live on
               camera.
@@ -260,7 +260,7 @@ export const Home = () => {
           </div>
           <div className="card">
             <img src="images/cards/person018.jpg" alt="card" />
-            <h3> JUNIOR INSTRUCTORS </h3>
+            <a href="/teachers">JUNIOR INSTRUCTORS</a>
             <p>
               Always ready to help you when you need extra help or feel stuck
               while learning.
@@ -268,7 +268,7 @@ export const Home = () => {
           </div>
           <div className="card">
             <img src="images/cards/person006.jpg" alt="card" />
-            <h3> CAREER SUPPORT </h3>
+            <a href="/teachers"> CAREER SUPPORT </a>
             <p>
               They’ll help you craft outstanding application documents and get
               you ready to present yourself.
@@ -276,7 +276,7 @@ export const Home = () => {
           </div>
           <div className="card">
             <img src="images/cards/person036.jpg" alt="card" />
-            <h3> COMMUNITY TEAM </h3>
+            <a href="/teachers"> COMMUNITY TEAM </a>
             <p>
               Here to support and help you to give you the best experience
               possible while you’re with us.{" "}

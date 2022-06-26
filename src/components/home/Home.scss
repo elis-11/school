@@ -120,10 +120,10 @@
     margin: auto;
     width: 90%;
 
-    h2{
+    h2 {
       margin: 5rem;
       padding-bottom: 2rem;
-      border-bottom: .3rem solid ;
+      border-bottom: 0.3rem solid;
     }
     .cards {
       display: flex;
@@ -214,11 +214,11 @@
     justify-content: center;
     margin: auto;
     width: 90%;
-      h2{
-        margin: 5rem;
-        padding-bottom: 2rem;
-        border-bottom: .3rem solid ;
-      }
+    h2 {
+      margin: 5rem;
+      padding-bottom: 2rem;
+      border-bottom: 0.3rem solid;
+    }
     .cards {
       display: flex;
       justify-content: center;
@@ -265,17 +265,28 @@
         font-size: 0.8rem;
       }
     }
-    .instructors{
+    .instructors {
       display: flex;
       justify-content: center;
-      .card{
+      .card {
         width: 80%;
         padding: 2rem;
         margin: 1rem;
-        img{
+        img {
           width: 180px;
           height: 180px;
-
+          padding-bottom: 2em;
+        }
+        a {
+          font-size: .9em;
+          text-decoration: none;
+          color: rgb(95, 95, 95);
+          &:hover {
+            color: white;
+          }
+        }
+        p{
+          font-size: 0.7em;
         }
       }
     }
