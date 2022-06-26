@@ -5,11 +5,15 @@ import { FaLaptopCode } from "react-icons/fa";
 import { SiTesla } from "react-icons/si";
 import { SiZalando } from "react-icons/si";
 import { FiFacebook } from "react-icons/fi";
+import { SiXdadevelopers } from "react-icons/si";
+import { FiAirplay } from "react-icons/fi";
+import { FiUsers } from "react-icons/fi";
 import "../components/home/Home.scss";
 
 export const Home = () => {
   return (
     <div className="home">
+      {/* ---INPUT--- */}
       <div className="intro">
         <div className="input">
           <h2>IGNITE YOUR CAREER IN TECH</h2>
@@ -19,7 +23,7 @@ export const Home = () => {
             up your current career with new, future-proof tech skills.
           </h4>
           <div className="buttons">
-            <button className="courses">Explore courses</button>
+            <button className="explore">Explore courses</button>
             <button className="apply">Apply now</button>
           </div>
           <div className="graduates">
@@ -41,6 +45,8 @@ export const Home = () => {
           <img src="images/home/banner1.png" alt="bg" />
         </div>
       </div>
+      {/* ---CAREER--- */}
+
       <div className="career">
         <h2>
           YOUR FAST-TRACK INTO A CAREER YOU LOVE <br />
@@ -111,11 +117,15 @@ export const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* ---DISCOVER--- */}
+
       <div className="discover">
         <h2>DISCOVER OUR COURSES</h2>
         <div className="cards">
           <div className="card design">
-            <img src="//source.unsplash.com/250x150/?" alt="card"/>
+            {/* <img src="//source.unsplash.com/250x150/?" alt="card" /> */}
+            <img src="images/discover/design.png" alt="card" />
             <div className="title">
               <h3>
                 DIGITAL PRODUCT <br /> DESIGN
@@ -133,12 +143,13 @@ export const Home = () => {
                 problem-solving.
               </p>
               <button>Explore course</button>
-              <br />
-              <a href="/students">Or apply now</a>
+              <div className="apply">
+                <a href="/students">Or apply now</a>
+              </div>
             </div>
           </div>
           <div className="card data">
-          <img src="//source.unsplash.com/250x150/?" alt="card"/>
+            <img src="images/discover/data.png" alt="card" />
             <div className="title">
               <h3>
                 DATA SCIENCE <br /> <div className="tralala">TRALALA</div>
@@ -155,12 +166,13 @@ export const Home = () => {
                 to help companies discover their greatest opportunities.
               </p>
               <button>Explore course</button>
-              <br />
-              <a href="/students">Or apply now</a>
+              <div className="apply">
+                <a href="/students">Or apply now</a>
+              </div>
             </div>
           </div>
           <div className="card web">
-          <img src="//source.unsplash.com/250x150/?" alt="card"/>
+            <img src="images/discover/web.png" alt="card" />
             <div className="title">
               <h3>
                 WEB & APP <br /> DEVELOPMENT{" "}
@@ -177,9 +189,98 @@ export const Home = () => {
                 websites and applications that others can only dream about.{" "}
               </p>
               <button>Explore course</button>
-              <br />
-              <a href="/students">Or apply now</a>
+              <div className="apply">
+                <a href="/students">Or apply now</a>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ---EXPERIENCE--- */}
+      <div className="courses">
+        <h2>
+          A PERSONALIZED SUPPORT SYSTEM BASED ON <br /> 40+ YEARS OF EXPERIENCE
+        </h2>
+        <p>
+          Of course, we weren’t helping people to find tech jobs back in the
+          80s. But we did spend 40 years perfecting our training programs to
+          help people find jobs in all kinds of industries. Now we have taken
+          our system and applied it to the tech industry. You won’t get this
+          level of support anywhere else:
+        </p>
+        <div className="cards">
+          <div className="card coach">
+            <div className="icon">
+              <SiXdadevelopers />
+            </div>
+            <a href="/courses">Web Developer courses</a>
+            <p>
+              {" "}
+              Whenever you need extra help, feel stuck or like you’re falling
+              behind, you can book a 1:1 session with an instructor who will
+              personally help you with your questions. So you can learn with
+              confidence and stay on track.
+            </p>
+          </div>
+          <div className="card coach">
+            <div className="icon">
+              <FiAirplay />
+            </div>
+            <a href="/courses">Online Marketing courses</a>
+            <p>
+              {" "}
+              There are many advantages to following an online course, classroom
+              training, or even ebooks. These are not restricted to digital
+              marketing courses but ask for all types of structured learning.
+            </p>
+          </div>
+          <div className="card coach">
+            <div className="icon">
+              <FiUsers />
+            </div>
+            <a href="/courses">1 on 1 help</a>
+            <p>
+              {" "}
+              Whenever you need extra help, feel stuck or like you’re falling
+              behind, you can book a 1:1 session with an instructor who will
+              personally help you with your questions. So you can learn with
+              confidence and stay on track.
+            </p>
+          </div>
+        </div>
+        <div className="instructors">
+          <div className="card">
+            <img src="images/cards/person008.jpg" alt="card" />
+            <h3> LEAD INSTRUCTORS </h3>
+            <p>
+              Responsible for teaching you all the relevant skills live on
+              camera.
+            </p>
+          </div>
+          <div className="card">
+            <img src="images/cards/person018.jpg" alt="card" />
+            <h3> JUNIOR INSTRUCTORS </h3>
+            <p>
+              Always ready to help you when you need extra help or feel stuck
+              while learning.
+            </p>
+          </div>
+          <div className="card">
+            <img src="images/cards/person006.jpg" alt="card" />
+            <h3> CAREER SUPPORT </h3>
+            <p>
+              They’ll help you craft outstanding application documents and get
+              you ready to present yourself.
+            </p>
+          </div>
+          <div className="card">
+            <img src="images/cards/person036.jpg" alt="card" />
+            <h3> COMMUNITY TEAM </h3>
+            <p>
+              Here to support and help you to give you the best experience
+              possible while you’re with us.{" "}
+            </p>
           </div>
         </div>
       </div>
