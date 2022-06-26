@@ -3,6 +3,7 @@ import "./App.scss";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
 import { Teachers } from "./pages/Teachers";
+import {Courses} from "./pages/Courses"
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/teachers" element={<Teachers/>} />
-          <Route path="/students" element={<div>Students</div>} />
+          <Route path="/courses" element={<Courses/>} />
           <Route path="/funding" element={<div>Funding</div>} />
           <Route path="/career" element={<div>Career</div>} />
           <Route path="/about" element={<div>About</div>} />

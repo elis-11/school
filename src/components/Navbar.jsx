@@ -5,8 +5,8 @@ export const Navbar = () => {
   return (
     <nav>
       <NavLink to="/">Home</NavLink>
+      <NavLink to="/courses">Courses</NavLink>
       <NavLink to="teachers">Teachers</NavLink>
-      <NavLink to="/students">Students</NavLink>
       <NavLink to="/funding">Funding</NavLink>
       <NavLink to="/career">Career</NavLink>
       <NavLink to="/about">About</NavLink>
