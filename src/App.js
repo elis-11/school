@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
 import { Teachers } from "./pages/Teachers";
 import {Courses} from "./pages/Courses"
+import {Employees} from "./pages/Employees"
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/teachers" element={<Teachers/>} />
           <Route path="/courses" element={<Courses/>} />
+          <Route path="/employees" element={<Employees/>} />
+          <Route path="/teachers" element={<Teachers/>} />
           <Route path="/funding" element={<div>Funding</div>} />
           <Route path="/career" element={<div>Career</div>} />
           <Route path="/about" element={<div>About</div>} />
