@@ -6,3 +6,10 @@ export const fetchEmployeesApi = async () => {
   });
   return response.json();
 };
+
+export const fetchCoursesApi = async () => {
+  const response = await fetch(`${API_URL}/courses`, {
+    credentials: "include",
+  });
+  return response.json();
+};

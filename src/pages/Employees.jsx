@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { fetchEmployeesApi } from "../components/helpers/apiCalls";
 import { useDataContext } from "../context/DataProvider";
@@ -27,7 +27,7 @@ export const Employees = () => {
           {employees.map((e) => (
             <div className="card" key={e._id}>
               <div>
-                <img src={e.image} alt="photo" />
+                <img src={e.image} alt={e.name} />
               </div>
               <div>{e.role}</div>
               <div>{e.name}</div>
