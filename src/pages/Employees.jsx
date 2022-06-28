@@ -22,7 +22,8 @@ export const Employees = () => {
 
   return (
     <div className="employees">
-
+      <div className="title">Tralala</div>
+      <div className="employee">
         <div className="cards">
           {employees.map((e) => (
             <div className="card" key={e._id}>
@@ -34,12 +35,15 @@ export const Employees = () => {
               <div>{e.email}</div>
               <div>City: {e.city}</div>
               <div>{e.qualification}</div>
-              <div>experience:
-                {e.experience} years</div>
+              <div>
+                experience:
+                {e.experience} years
+              </div>
               <div>specialized: {e.specialized}</div>
             </div>
           ))}
         </div>
       </div>
+    </div>
   );
 };

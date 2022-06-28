@@ -5,38 +5,46 @@
   text-align: center;
   place-items: center;
   width: 100%;
-  margin: 2rem;
+  // margin: 2rem;
   color: rgb(95, 95, 95);
+  .title {
+    color: #000;
+  }
 
-  .cards {
+  .employee {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    .card {
-      width: 10rem;
-      height: 20rem;
-      margin: 1rem;
-      -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+    justify-content: center;
+    .cards {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 80%;
+      .card {
+        width: 12rem;
+        height: 24rem;
+        margin: 1rem;
+        -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
 
-      -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+        -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
 
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
-      &:hover {
-        -webkit-box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
-          inset -15px -15px 20px #fff;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+        &:hover {
+          -webkit-box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
+            inset -15px -15px 20px #fff;
 
-        -moz-box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
-          inset -15px -15px 20px #fff;
+          -moz-box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
+            inset -15px -15px 20px #fff;
 
-        box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
-          inset -15px -15px 20px #fff;
-      }
+          box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
+            inset -15px -15px 20px #fff;
+        }
 
         img {
-            width: 10rem;
-            height: 10rem;
-      
+          width: 12rem;
+          height: 12rem;
+          padding-bottom: 1em;
         }
+      }
     }
   }
 }

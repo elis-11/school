@@ -18,16 +18,16 @@ export const Navbar = () => {
         Courses
       </NavLink>
       <NavLink
-        to="teachers"
-        className={(navData) => (navData.isActive ? "active" : "none")}
-      >
-        Teachers
-      </NavLink>
-      <NavLink
         to="employees"
         className={(navData) => (navData.isActive ? "active" : "none")}
       >
         Employees
+      </NavLink>
+      <NavLink
+        to="teachers"
+        className={(navData) => (navData.isActive ? "active" : "none")}
+      >
+        Teachers
       </NavLink>
       <NavLink
         to="/funding"
