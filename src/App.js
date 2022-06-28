@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.scss";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/nav/Navbar";
 import { Home } from "./pages/Home";
 import { Teachers } from "./pages/Teachers";
 import {Courses} from "./pages/Courses"
