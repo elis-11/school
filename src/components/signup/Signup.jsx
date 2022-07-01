@@ -3,6 +3,7 @@ import { signupApi } from "../helpers/apiCalls";
 import { useNavigate } from "react-router-dom";
 
 export const Signup = () => {
+  
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();

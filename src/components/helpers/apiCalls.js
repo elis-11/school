@@ -22,8 +22,9 @@ export const loginApi = async (email, password) => {
     body: JSON.stringify(credentials),
     headers: {
       "Content-Type": "application/json",
+      Accept: "application/json",
     },
-    credentials: "include",  
+    credentials: "include",
   });
 
   return response.json();
@@ -37,6 +38,7 @@ export const signupApi = async (name, email, password) => {
     body: JSON.stringify(userData),
     headers: {
       "Content-Type": "application/json",
+      Accept: "application/json",
     },
     credentials: "include",
   });
@@ -53,6 +55,13 @@ export const logoutApi = async () => {
 
 export const checkAuthStatusApi = async () => {
   const response = await fetch(`${API_URL}/users/me`, {
+    credentials: "include",
+  });
+  return response.json();
+};
+
+export const fetchUsersApi = async () => {
+  const response = await fetch(`${API_URL}/users`, {
     credentials: "include",
   });
   return response.json();

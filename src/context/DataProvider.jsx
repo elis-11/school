@@ -10,7 +10,7 @@ export const useDataContext = () => {
 export const DataProvider = ({ children }) => {
   const [employees, setEmployees] = useState([]);
   const [courses, setCourses] = useState([]);
-  const [user, setUser] = useState();
+  const [user, setUser] = useState([]);
   const [errors, setErrors] = useState();
 
   useEffect(() => {
@@ -23,6 +23,10 @@ export const DataProvider = ({ children }) => {
       response = await fetch(`${process.env.REACT_APP_API_URL}/courses`);
       const coursesApi = await response.json();
       setCourses(coursesApi);
+
+      response = await fetch(`${process.env.REACT_APP_API}/users`);
+      const usersApi = await response.json();
+      setUser(usersApi);
     };
     fetchData();
 
