@@ -11,6 +11,9 @@ import { FiUsers } from "react-icons/fi";
 import "../components/home/Home.scss";
 
 export const Home = () => {
+
+
+
   return (
     <div className="home">
       {/* ---INPUT--- */}

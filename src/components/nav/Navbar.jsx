@@ -1,7 +1,21 @@
-import { NavLink } from "react-router-dom";
-import './Navbar.scss';
+import { NavLink, useNavigate } from "react-router-dom";
+import { useDataContext } from "../../context/DataProvider";
+import { logoutApi } from "../helpers/apiCalls";
+import "./Navbar.scss";
 
 export const Navbar = () => {
+
+const {user, setUser}= useDataContext()
+
+const navigate= useNavigate();
+
+const handleLogout= e=> {
+  e.preventDefault();
+  setUser()
+  logoutApi()
+  navigate("/login")
+}
+
   return (
     <nav>
       <NavLink
@@ -42,18 +56,29 @@ export const Navbar = () => {
         Career
       </NavLink>
       <NavLink
-        to="/about"
+        to="/signup"
         className={(navData) => (navData.isActive ? "active" : "none")}
       >
-        About
+        Signup
       </NavLink>
-      <NavLink
-        to="/blog"
-        className={(navData) => (navData.isActive ? "active" : "none")}
-      >
-        Blog
-      </NavLink>
-      <NavLink className="apply" to="/apply">
+      {!user && (
+         <NavLink
+          to="/login"
+          className={(navData) => (navData.isActive ? "active" : "none")}
+        >
+          Login
+        </NavLink>
+)} 
+      {user && (
+         <NavLink
+         onClick={handleLogout}
+          to="#"
+          className={(navData) => (navData.isActive ? "active" : "none")}
+        >
+          Logout
+        </NavLink>
+)}
+          <NavLink className="apply" to="/apply">
         Apply now
       </NavLink>
     </nav>
