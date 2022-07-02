@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.scss";
 import { Navbar } from "./components/nav/Navbar";
-import { Home } from "./pages/Home";
-import { Teachers } from "./pages/Teachers";
-import {Courses} from "./pages/Courses"
-import {Employees} from "./pages/Employees"
+import { Home } from "./components/home/Home";
+import { Teachers } from "./components/teachers/Teachers";
+import {Courses} from "../src/components/courses/Courses"
+import {Employees} from "../src/components/employees/Employees"
 import { Login } from "./components/login/Login";
 import { Signup } from "./components/signup/Signup";
 

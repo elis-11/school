@@ -1,0 +1,30 @@
+.Login {
+    box-sizing: border-box;
+    width: 100%;
+    display: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(95, 95, 95);
+    padding-top: 5rem;
+    form{
+        input{
+            width: 15rem;
+            height: 2rem;
+            margin: .3rem;
+            border-radius: 2rem;
+            // place-items: center;
+            justify-content: center;
+            padding-left: 1em;
+        }
+        button{
+            width: 6rem;
+            height: 2rem;
+            margin: .3rem;
+            border-radius: 2rem;
+            // place-items: center;
+            justify-content: center;
+            padding-left: 1em;
+
+        }
+    }
+}

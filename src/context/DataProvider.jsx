@@ -11,18 +11,23 @@ export const DataProvider = ({ children }) => {
   const [employees, setEmployees] = useState([]);
   const [courses, setCourses] = useState([]);
   const [user, setUser] = useState([]);
+  const [teachers, setTeachers] = useState([]);
   const [errors, setErrors] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       let response = await fetch(`${process.env.REACT_APP_API_URL}/employees`);
       const employeesApi = await response.json();
-      // console.log(employeesApi);
+      // console.log({employeesApi});
       setEmployees(employeesApi);
 
       response = await fetch(`${process.env.REACT_APP_API_URL}/courses`);
       const coursesApi = await response.json();
       setCourses(coursesApi);
+
+      response = await fetch(`${process.env.REACT_APP_API_URL}/teachers`)
+      const teachersApi= await response.json();
+      setTeachers(teachersApi);
 
       response = await fetch(`${process.env.REACT_APP_API}/users`);
       const usersApi = await response.json();
@@ -46,6 +51,8 @@ export const DataProvider = ({ children }) => {
     setCourses,
     user,
     setUser,
+    teachers, 
+    setTeachers,
     errors,
     setErrors,
   };

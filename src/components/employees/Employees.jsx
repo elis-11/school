@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
-import { fetchEmployeesApi } from "../components/helpers/apiCalls";
-import { useDataContext } from "../context/DataProvider";
-import "../components/employees/Employees.scss";
+import { fetchEmployeesApi } from "../helpers/apiCalls";
+import { useDataContext } from "../../context/DataProvider";
+import "./Employees.scss";
 
 export const Employees = () => {
   const { employees, setEmployees } = useDataContext();

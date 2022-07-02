@@ -8,6 +8,16 @@
   h2 {
     font-weight: normal;
     font-size: 2rem;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 8rem;
+      color: rgb(95, 95, 95);
+      height: 4px;
+      margin: 1.5rem auto;
+      background-color: rgb(95, 95, 95);
+    }
   }
   h4 {
     color: rgb(95, 95, 95);
@@ -25,7 +35,7 @@
       .buttons {
         display: flex;
         place-items: center;
-        font-size: .8rem;
+        font-size: 0.8rem;
         // margin: 4rem 5rem;
         .explore {
           width: 9rem;
@@ -74,7 +84,7 @@
     margin: auto;
     color: rgb(95, 95, 95);
     h2 {
-      border-bottom: 0.3rem solid;
+      // border-bottom: 0.3rem solid;
       padding-bottom: 2rem;
     }
     h5 {
@@ -124,7 +134,7 @@
     h2 {
       margin: 5rem;
       padding-bottom: 2rem;
-      border-bottom: 0.3rem solid;
+      // border-bottom: 0.3rem solid;
     }
     .cards {
       display: flex;
@@ -219,7 +229,7 @@
     h2 {
       margin: 5rem;
       padding-bottom: 2rem;
-      border-bottom: 0.3rem solid;
+      // border-bottom: 0.3rem solid;
     }
     .cards {
       display: flex;
@@ -280,14 +290,14 @@
           padding-bottom: 2em;
         }
         a {
-          font-size: .9em;
+          font-size: 0.9em;
           text-decoration: none;
           color: rgb(95, 95, 95);
           &:hover {
             color: white;
           }
         }
-        p{
+        p {
           font-size: 0.7em;
         }
       }

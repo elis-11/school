@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { signupApi } from "../helpers/apiCalls";
 import { useNavigate } from "react-router-dom";
+import "./Signup.scss";
 
 export const Signup = () => {
-  
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -25,19 +25,21 @@ export const Signup = () => {
   };
 
   return (
-    <form onSubmit={onSignupSubmit}>
-      <div>
-        <input type="text" ref={nameRef} placeholder="name" />
-      </div>
-      <div>
-        <input type="text" ref={emailRef} placeholder="Email" />
-      </div>
-      <div>
-        <input type="password" ref={passwordRef} placeholder="Password" />
-      </div>
-      <div>
-        <button type="submit">Signup</button>
-      </div>
-    </form>
+    <div className="Signup">
+      <form onSubmit={onSignupSubmit}>
+        <div>
+          <input type="text" ref={nameRef} placeholder="name" />
+        </div>
+        <div>
+          <input type="text" ref={emailRef} placeholder="Email" />
+        </div>
+        <div>
+          <input type="password" ref={passwordRef} placeholder="Password" />
+        </div>
+        <div>
+          <button type="submit">Signup</button>
+        </div>
+      </form>
+    </div>
   );
 };

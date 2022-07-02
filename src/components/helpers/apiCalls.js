@@ -14,6 +14,28 @@ export const fetchCoursesApi = async () => {
   return response.json();
 };
 
+export const fetchTeachersApi= async ()=>{
+  const response= await fetch(`${API_URL}/teachers`, {
+    credentials: "include",
+  })
+  return response.json();
+}
+
+export const checkAuthStatusApi = async () => {
+  const response = await fetch(`${API_URL}/users/me`, {
+    credentials: "include",
+  });
+  return response.json();
+};
+
+export const fetchUsersApi = async () => {
+  const response = await fetch(`${API_URL}/users`, {
+    credentials: "include",
+  });
+  return response.json();
+};
+
+
 export const loginApi = async (email, password) => {
   const credentials = { email, password };
 
@@ -48,20 +70,6 @@ export const signupApi = async (name, email, password) => {
 
 export const logoutApi = async () => {
   const response = await fetch(`${API_URL}/users/logout`, {
-    credentials: "include",
-  });
-  return response.json();
-};
-
-export const checkAuthStatusApi = async () => {
-  const response = await fetch(`${API_URL}/users/me`, {
-    credentials: "include",
-  });
-  return response.json();
-};
-
-export const fetchUsersApi = async () => {
-  const response = await fetch(`${API_URL}/users`, {
     credentials: "include",
   });
   return response.json();

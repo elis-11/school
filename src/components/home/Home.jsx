@@ -8,11 +8,9 @@ import { FiFacebook } from "react-icons/fi";
 import { SiXdadevelopers } from "react-icons/si";
 import { FiAirplay } from "react-icons/fi";
 import { FiUsers } from "react-icons/fi";
-import "../components/home/Home.scss";
+import "./Home.scss";
 
 export const Home = () => {
-
-
 
   return (
     <div className="home">

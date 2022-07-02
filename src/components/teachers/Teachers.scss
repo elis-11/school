@@ -1,3 +1,50 @@
 .Teachers {
-  color: aqua;
-}
+    box-sizing: border-box;
+    display: column;
+    justify-content: center;
+    text-align: center;
+    place-items: center;
+    width: 100%;
+    // margin: 2rem;
+    color: rgb(95, 95, 95);
+    .title {
+      color: #000;
+    }
+  
+    .teacher {
+      display: flex;
+      justify-content: center;
+      .cards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 80%;
+        .card {
+          width: 12rem;
+          height: 20rem;
+          margin: 1rem;
+          -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  
+          -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+          &:hover {
+            -webkit-box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
+              inset -15px -15px 20px #fff;
+  
+            -moz-box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
+              inset -15px -15px 20px #fff;
+  
+            box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
+              inset -15px -15px 20px #fff;
+          }
+  
+          img {
+            width: 12rem;
+            height: 8rem;
+            padding-bottom: 1em;
+          }
+        }
+      }
+    }
+  }
