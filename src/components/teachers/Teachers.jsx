@@ -31,11 +31,14 @@ export const Teachers = () => {
                 <img src={e.image} alt={e.name} />
               </div>
               <div>{e.name}</div>
+              <div>{e.title}</div>
               <div>city: {e.city}</div>
               <div>email: {e.email}</div>
-              <div>title: {e.title}</div>
-              <div>experience: {e.experience}</div>
-              <div>specialized: {e.specialized}</div>
+              <div>
+                experience: {e.experience}{" "}
+                {e.experience === 1 ? "year" : "years"}
+              </div>
+              <div>specialized: <br /> {e.specialized}</div>
             </div>
           ))}
         </div>
