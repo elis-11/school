@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
-import { logoutApi } from "../helpers/apiCalls";
+import { logoutApi } from "../../helpers/apiCalls";
 import "./Navbar.scss";
 
 export const Navbar = () => {

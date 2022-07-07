@@ -1,7 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
-import { fetchCoursesApi } from "../helpers/apiCalls";
+// import { fetchCoursesApi } from "../helpers/apiCalls";
 import { useDataContext } from "../../context/DataProvider";
+import { fetchCoursesApi } from "../../helpers/apiCalls";
 import "./Courses.scss";
 
 export const Courses = () => {

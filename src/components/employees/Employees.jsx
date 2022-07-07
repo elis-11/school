@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
-import { fetchEmployeesApi } from "../helpers/apiCalls";
+import { fetchEmployeesApi } from "../../helpers/apiCalls";
 import { useDataContext } from "../../context/DataProvider";
 import "./Employees.scss";
 

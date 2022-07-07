@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
-import { loginApi } from "../helpers/apiCalls";
+import { loginApi } from "../../helpers/apiCalls";
 import "./Login.scss";
 
 export const Login = () => {

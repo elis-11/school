@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { signupApi } from "../helpers/apiCalls";
+import { signupApi } from "../../helpers/apiCalls";
 import { useNavigate } from "react-router-dom";
 import "./Signup.scss";
 

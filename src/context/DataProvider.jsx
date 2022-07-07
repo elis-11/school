@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { checkAuthStatusApi } from "../components/helpers/apiCalls";
+import { checkAuthStatusApi } from "../helpers/apiCalls";
 
 export const DataContext = createContext();
 
