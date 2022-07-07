@@ -1,4 +1,4 @@
 # school
 Full-Stack Project
 
-Vercel: https://school-orcin.vercel.app
+Link to backend: https://school-server-pi.vercel.app
