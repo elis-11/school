@@ -4,17 +4,16 @@ import { logoutApi } from "../../helpers/apiCalls";
 import "./Navbar.scss";
 
 export const Navbar = () => {
+  const { user, setUser } = useDataContext();
 
-const {user, setUser}= useDataContext()
+  const navigate = useNavigate();
 
-const navigate= useNavigate();
-
-const handleLogout= e=> {
-  e.preventDefault();
-  setUser()
-  logoutApi()
-  navigate("/login")
-}
+  const handleLogout = (e) => {
+    e.preventDefault();
+    setUser();
+    logoutApi();
+    navigate("/login");
+  };
 
   return (
     <nav>
@@ -62,23 +61,23 @@ const handleLogout= e=> {
         Signup
       </NavLink>
       {!user && (
-         <NavLink
+        <NavLink
           to="/login"
           className={(navData) => (navData.isActive ? "active" : "none")}
         >
           Login
         </NavLink>
-)} 
+      )}
       {user && (
-         <NavLink
-         onClick={handleLogout}
+        <NavLink
+          onClick={handleLogout}
           to="#"
           className={(navData) => (navData.isActive ? "active" : "none")}
         >
           Logout
         </NavLink>
-)}
-          <NavLink className="apply" to="/apply">
+      )}
+      <NavLink className="apply" to="/apply">
         Apply now
       </NavLink>
     </nav>
