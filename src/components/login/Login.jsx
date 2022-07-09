@@ -38,9 +38,9 @@ export const Login = () => {
           Don't have an account? <NavLink to="/signup">  Sign up now</NavLink>
         </div>
         <form onSubmit={onLoginSubmit}>
-          <div className="S">S</div>
+          <div className="S">A</div>
           <div>
-            <div className="title">Login to our SCHOOL</div>
+            <div className="title">Login to DCA</div>
             <input type="text" ref={emailRef} placeholder="Email" />
           </div>
           <div>

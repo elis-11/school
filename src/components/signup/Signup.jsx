@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { signupApi } from "../../helpers/apiCalls";
 import { useNavigate } from "react-router-dom";
 import "./Signup.scss";
+import Background from '../../images/comp.png';
 
 export const Signup = () => {
   const nameRef = useRef();
@@ -26,6 +27,7 @@ export const Signup = () => {
 
   return (
     <div className="Signup">
+      <div className="background" style={{background: `url(${Background})`}}>
       <form onSubmit={onSignupSubmit}>
         <div>
           <input type="text" ref={nameRef} placeholder="name" />
@@ -40,6 +42,7 @@ export const Signup = () => {
           <button type="submit">Signup</button>
         </div>
       </form>
+    </div>
     </div>
   );
 };
