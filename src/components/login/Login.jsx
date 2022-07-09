@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { loginApi } from "../../helpers/apiCalls";
 import "./Login.scss";
@@ -32,17 +32,25 @@ export const Login = () => {
 
   return (
     <div className="Login">
-      <form onSubmit={onLoginSubmit}>
-        <div>
-          <input type="text" ref={emailRef} placeholder="Email" />
+      <img src="images/login/bc.png" alt="card" />
+      <div className="register">
+        <div className="signup">
+          Don't have an account? <NavLink to="/signup">  Sign up now</NavLink>
         </div>
-        <div>
-          <input type="password" ref={passwordRef} placeholder="Password" />
-        </div>
-        <div>
-          <button type="submit">Login</button>
-        </div>
-      </form>
+        <form onSubmit={onLoginSubmit}>
+          <div className="S">S</div>
+          <div>
+            <div className="title">Login to our SCHOOL</div>
+            <input type="text" ref={emailRef} placeholder="Email" />
+          </div>
+          <div>
+            <input type="password" ref={passwordRef} placeholder="Password" />
+          </div>
+          <div>
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

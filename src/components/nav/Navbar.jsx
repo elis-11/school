@@ -1,6 +1,8 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { logoutApi } from "../../helpers/apiCalls";
+import { MdPersonOutline } from "react-icons/md";
+import { MdLogout } from "react-icons/md";
 import "./Navbar.scss";
 
 export const Navbar = () => {
@@ -54,29 +56,28 @@ export const Navbar = () => {
       >
         Career
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/signup"
         className={(navData) => (navData.isActive ? "active" : "none")}
       >
         Signup
-      </NavLink>
-      {!user && (
-        <NavLink
-          to="/login"
-          className={(navData) => (navData.isActive ? "active" : "none")}
-        >
-          Login
-        </NavLink>
-      )}
-      {user && (
-        <NavLink
-          onClick={handleLogout}
-          to="#"
-          className={(navData) => (navData.isActive ? "active" : "none")}
-        >
-          Logout
-        </NavLink>
-      )}
+      </NavLink> */}
+
+      <div className="icons">
+        {!user && (
+          <NavLink to="/login">
+            <MdPersonOutline className="icon"></MdPersonOutline>
+            {/* Login */}
+          </NavLink>
+        )}
+        {user && (
+          <NavLink onClick={handleLogout} to="#">
+            <MdLogout className="icon"></MdLogout>
+            {/* Logout */}
+          </NavLink>
+        )}
+      </div>
+
       <NavLink className="apply" to="/apply">
         Apply now
       </NavLink>
