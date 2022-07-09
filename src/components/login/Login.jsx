@@ -41,7 +41,7 @@ export const Login = () => {
           <div className="S">A</div>
           <div>
             <div className="title">Login to DCA</div>
-            <input type="text" ref={emailRef} placeholder="Email" />
+            <input type="text" ref={emailRef} placeholder="E-mail" />
           </div>
           <div>
             <input type="password" ref={passwordRef} placeholder="Password" />

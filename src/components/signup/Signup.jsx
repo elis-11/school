@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { signupApi } from "../../helpers/apiCalls";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Signup.scss";
-import Background from '../../images/comp.png';
+// import Background from "../../images/comp.png";
 
 export const Signup = () => {
   const nameRef = useRef();
@@ -27,22 +27,39 @@ export const Signup = () => {
 
   return (
     <div className="Signup">
-      <div className="background" style={{background: `url(${Background})`}}>
-      <form onSubmit={onSignupSubmit}>
-        <div>
-          <input type="text" ref={nameRef} placeholder="name" />
+      {/* <div className="background" style={{background: `url(${Background})`}}> */}
+      <div
+        className="background"
+        style={{
+          backgroundImage:
+            "url(" +
+            "https://www.netzwoche.ch/sites/default/files/styles/np8_full/public/media/2022/07/06/christopher-gower-vjMgqUkS8q8-unsplash.png?itok=zPuURLwI" +
+            ")",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="login">
+          Already a member? <NavLink to="/login">Sign in</NavLink>
         </div>
-        <div>
-          <input type="text" ref={emailRef} placeholder="Email" />
-        </div>
-        <div>
-          <input type="password" ref={passwordRef} placeholder="Password" />
-        </div>
-        <div>
-          <button type="submit">Signup</button>
-        </div>
-      </form>
-    </div>
+        <form onSubmit={onSignupSubmit}>
+        <div className="S">A</div>
+          <div>
+            <div className="title">Sign up to DCA</div>
+            <input type="text" ref={nameRef} placeholder="Name" />
+          </div>
+          <div>
+            <input type="text" ref={emailRef} placeholder="E-mail" />
+          </div>
+          <div>
+            <input type="password" ref={passwordRef} placeholder="Password" />
+          </div>
+          <div>
+            <button type="submit">Signup</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
