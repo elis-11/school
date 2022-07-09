@@ -12,6 +12,7 @@ export const DataProvider = ({ children }) => {
   const [courses, setCourses] = useState([]);
   const [user, setUser] = useState([]);
   const [teachers, setTeachers] = useState([]);
+  const [users, setUsers] = useState([]);
   const [errors, setErrors] = useState();
 
   useEffect(() => {
@@ -51,6 +52,8 @@ export const DataProvider = ({ children }) => {
     setCourses,
     user,
     setUser,
+    users,
+    setUsers,
     teachers, 
     setTeachers,
     errors,

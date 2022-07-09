@@ -3,8 +3,9 @@ import "./App.scss";
 import { Navbar } from "./components/nav/Navbar";
 import { Home } from "./components/home/Home";
 import { Teachers } from "./components/teachers/Teachers";
-import {Courses} from "../src/components/courses/Courses"
-import {Employees} from "../src/components/employees/Employees"
+import { Users } from "./components/users/Users";
+import { Courses } from "../src/components/courses/Courses";
+import { Employees } from "../src/components/employees/Employees";
 import { Login } from "./components/login/Login";
 import { Signup } from "./components/signup/Signup";
 
@@ -16,10 +17,11 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/courses" element={<Courses/>} />
-          <Route path="/employees" element={<Employees/>} />
-          <Route path="/teachers" element={<Teachers/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/employees" element={<Employees />} />
+          <Route path="/teachers" element={<Teachers />} />
+          <Route path="/users" element={<Users />} />
           <Route path="/funding" element={<div>Funding</div>} />
           <Route path="/career" element={<div>Career</div>} />
           <Route path="/about" element={<div>About</div>} />

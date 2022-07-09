@@ -27,7 +27,7 @@ export const Login = () => {
     setErrors("");
     setUser(result);
 
-    navigate("/employees", { replace: true });
+    navigate("/users", { replace: true });
   };
 
   return (

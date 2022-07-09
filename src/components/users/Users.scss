@@ -1,0 +1,33 @@
+.users {
+    margin: auto;
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #777;
+    // text-align: left;
+    font-size: 1.1rem;
+    thead {
+        font-size: 1.5rem;
+    }
+    img {
+        width: 60px;
+      border-radius: 50%;
+    }
+    td {
+      border-bottom: 1px solid #777;
+      padding: 20px 50px;
+    }
+    th {
+      border-bottom: 1px solid #777;
+      padding: 20px 50px;
+    }
+    .icon{
+        font-size: 1.3rem;
+        color: #777;
+    }
+  }
+}
