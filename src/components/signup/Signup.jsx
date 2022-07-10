@@ -22,7 +22,7 @@ export const Signup = () => {
     if (result.error) {
       return console.log(result.error);
     }
-    navigate("/");
+    navigate("/users");
   };
 
   return (

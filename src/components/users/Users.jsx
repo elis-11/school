@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import { useDataContext } from "../../context/DataProvider";
 import { fetchUsersApi } from "../../helpers/apiCalls";
 import "./Users.scss";
-import {MdDelete} from "react-icons/md"
+import { MdDelete } from "react-icons/md";
 
 export const Users = () => {
-  const { users, setUsers } = useDataContext();
+  const { users, setUsers, filter, setFilter } = useDataContext();
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -21,37 +21,48 @@ export const Users = () => {
     }
   }, [users]);
 
+  const onFilterUser = (e) => {
+    setFilter({ ...filter, [e.target.name]: e.target.value });
+  };
 
   return (
     <div className="users">
-      <div className="title">Total: {users.length} Users</div>
+      <form className="filter">
+        <div className="name">
+          <input
+            type="text"
+            name="name"
+            placeholder="Search"
+            onChange={onFilterUser}
+          />
+        </div>
+      </form>
+
       <table>
         <thead>
           <tr>
-            <th></th>
-            {/* <th>photo</th> */}
+            <th>
+              Total: {users.length} {users.length === 1 ? "User" : "Users"}
+            </th>
             <th>name</th>
             <th>e-mail</th>
             <th></th>
           </tr>
         </thead>
-          <tbody>
-            {users.map((u) => (
-              <tr key={u._id}>
-                <td>
-                  {/* <img src={`/images/users/${u.photo}`} alt={u.name} /> */}
-                  <img src={u.image} alt={u.name} />
-                </td>
-                <td>{u.name}</td>
-                <td>{u.email}</td>
-                <td>
-                  <MdDelete className="icon">
-                     {/* onClick={()=> deleteUser(u._id)}  */}
-                  </MdDelete>
-                </td>
-              </tr>
-            ))}
-          </tbody>
+        <tbody>
+          {users.map((user, _id) => (
+            <tr key={user._id}>
+              <td>
+                <img src={`/images/users/${user.image}`} alt={user.name} />
+              </td>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td>
+                <MdDelete className="icon"></MdDelete>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );

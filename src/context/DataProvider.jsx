@@ -6,6 +6,9 @@ export const DataContext = createContext();
 export const useDataContext = () => {
   return useContext(DataContext);
 };
+const filterDefault = {
+  name: "",
+};
 
 export const DataProvider = ({ children }) => {
   const [employees, setEmployees] = useState([]);
@@ -14,6 +17,7 @@ export const DataProvider = ({ children }) => {
   const [teachers, setTeachers] = useState([]);
   const [users, setUsers] = useState([]);
   const [errors, setErrors] = useState();
+  const [filter, setFilter] = useState(filterDefault);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,8 +30,8 @@ export const DataProvider = ({ children }) => {
       const coursesApi = await response.json();
       setCourses(coursesApi);
 
-      response = await fetch(`${process.env.REACT_APP_API_URL}/teachers`)
-      const teachersApi= await response.json();
+      response = await fetch(`${process.env.REACT_APP_API_URL}/teachers`);
+      const teachersApi = await response.json();
       setTeachers(teachersApi);
 
       response = await fetch(`${process.env.REACT_APP_API}/users`);
@@ -54,10 +58,12 @@ export const DataProvider = ({ children }) => {
     setUser,
     users,
     setUsers,
-    teachers, 
+    teachers,
     setTeachers,
     errors,
     setErrors,
+    filter,
+    setFilter,
   };
 
   return (
