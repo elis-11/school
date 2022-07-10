@@ -24,7 +24,7 @@ export const Users = () => {
 
   return (
     <div className="users">
-      <div className="title">Tralala</div>
+      <div className="title">Total: {users.length} Users</div>
       <table>
         <thead>
           <tr>
