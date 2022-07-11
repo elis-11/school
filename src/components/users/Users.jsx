@@ -1,25 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from "react";
 import { useDataContext } from "../../context/DataProvider";
-import { fetchUsersApi } from "../../helpers/apiCalls";
 import "./Users.scss";
 import { MdDelete } from "react-icons/md";
 
 export const Users = () => {
-  const { users, setUsers, filter, setFilter } = useDataContext();
-
-  useEffect(() => {
-    const fetchUsers = async () => {
-      const result = await fetchUsersApi();
-      if (result.error) {
-        return console.log("[OUCH]", result.error);
-      }
-      setUsers(result);
-    };
-    if (users) {
-      fetchUsers();
-    }
-  }, [users]);
+  const { users, filter, setFilter } = useDataContext();
 
   const onFilterUser = (e) => {
     setFilter({ ...filter, [e.target.name]: e.target.value });
@@ -42,7 +26,7 @@ export const Users = () => {
         <thead>
           <tr>
             <th>
-              Total: {users.length} {users.length === 1 ? "User" : "Users"}
+              Total: {users.length} { users.length === 1 ? "User" : "Users"}
             </th>
             <th>name</th>
             <th>e-mail</th>

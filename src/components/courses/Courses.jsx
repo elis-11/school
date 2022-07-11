@@ -1,25 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from "react";
-// import { fetchCoursesApi } from "../helpers/apiCalls";
 import { useDataContext } from "../../context/DataProvider";
-import { fetchCoursesApi } from "../../helpers/apiCalls";
 import "./Courses.scss";
 
 export const Courses = () => {
-  const { courses, setCourses } = useDataContext();
+  const { courses } = useDataContext();
 
-  useEffect(() => {
-    const fetchCourses = async () => {
-      const result = await fetchCoursesApi();
-      if (result.error) {
-        console.log("OUCH", result.error);
-      }
-      setCourses(result);
-    };
-    if (courses) {
-      fetchCourses();
-    }
-  }, [courses]);
 
   return (
     <div>

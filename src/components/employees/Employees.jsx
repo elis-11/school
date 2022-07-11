@@ -1,24 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from "react";
-import { fetchEmployeesApi } from "../../helpers/apiCalls";
 import { useDataContext } from "../../context/DataProvider";
 import "./Employees.scss";
 
 export const Employees = () => {
-  const { employees, setEmployees } = useDataContext();
+  const { employees } = useDataContext();
 
-  useEffect(() => {
-    const fetchEmployees = async () => {
-      const result = await fetchEmployeesApi();
-      if (result.error) {
-        return console.log("[OUCH]", result.error);
-      }
-      setEmployees(result);
-    };
-    if (employees) {
-      fetchEmployees();
-    }
-  }, [employees]);
 
   return (
     <div className="employees">
