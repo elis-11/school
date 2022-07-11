@@ -41,8 +41,6 @@ export const DataProvider = ({ children }) => {
     };
     checkAuthStatus(); // Load user in to state
   }, []);
-
-
   useEffect(() => {
     const fetchData = async () => {
       let response = await fetch(`${process.env.REACT_APP_API_URL}/employees`);

@@ -2,9 +2,13 @@ import { useRef } from "react";
 import { signupApi } from "../../helpers/apiCalls";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Signup.scss";
+import { useDataContext } from "../../context/DataProvider";
 // import Background from "../../images/comp.png";
 
 export const Signup = () => {
+
+const {setUser, setErrors}= useDataContext();
+
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -20,9 +24,13 @@ export const Signup = () => {
       passwordRef.current.value
     );
     if (result.error) {
-      return console.log(result.error);
+      return setErrors(result.error);
     }
-    navigate("/users");
+    console.log(result);
+    setErrors("")
+    setUser(result)
+
+    navigate("/users", { replace: true });
   };
 
   return (
