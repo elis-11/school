@@ -8,10 +8,10 @@ import { FiFacebook } from "react-icons/fi";
 import { SiXdadevelopers } from "react-icons/si";
 import { FiAirplay } from "react-icons/fi";
 import { FiUsers } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 import "./Home.scss";
 
 export const Home = () => {
-
   return (
     <div className="home">
       {/* ---INPUT--- */}
@@ -80,7 +80,9 @@ export const Home = () => {
             <div className="icon">
               <FaLaptopHouse />
             </div>
-            <div className="title">Hybrid learning experience</div>
+            <NavLink to="/courses" className="title">
+              Hybrid learning experience
+            </NavLink>
             <p>
               Take advantage of a unique mix of remote learning and an in-depth
               campus project phase.
@@ -90,7 +92,9 @@ export const Home = () => {
             <div className="icon">
               <FaLaptopCode />
             </div>
-            <div className="title">Live and interactive online classes</div>
+            <NavLink to="/courses" className="title">
+              Live and interactive online classes
+            </NavLink>
             <p>
               Enjoy hands-on instructor-led classes, workshops, team challenges
               and much more.
@@ -100,7 +104,9 @@ export const Home = () => {
             <div className="icon">
               <FaBullseye />
             </div>
-            <div className="title">Build a job-ready portfolio</div>
+            <NavLink to="/projects" className="title">
+              Build a job-ready projects
+            </NavLink>
             <p>
               And enjoy personalized career support along the way to nail your
               job interview.
@@ -110,7 +116,9 @@ export const Home = () => {
             <div className="icon">
               <FaHandshake />
             </div>
-            <div className="title">Get hired with our Job Guarantee</div>
+            <NavLink to="/projects" className="title">
+              Get hired with our Job Guarantee
+            </NavLink>
             <p>
               Find a job in 6 months or get your money back. <br /> *Conditions
               apply
