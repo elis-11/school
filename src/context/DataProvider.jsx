@@ -9,9 +9,6 @@ export const useDataContext = () => {
   return useContext(DataContext);
 };
 
-const filterDefault = {
-  name: "",
-};
 
 export const DataProvider = ({ children }) => {
   const [employees, setEmployees] = useState([]);
@@ -21,7 +18,6 @@ export const DataProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [projects, setProjects] = useState([]);
   const [errors, setErrors] = useState();
-  const [filter, setFilter] = useState(filterDefault);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -109,8 +105,6 @@ export const DataProvider = ({ children }) => {
     setProjects,
     errors,
     setErrors,
-    filter,
-    setFilter,
   };
 
   return (
