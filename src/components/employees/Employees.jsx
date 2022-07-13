@@ -10,21 +10,21 @@ export const Employees = () => {
       <div className="title">Tralala</div>
       <div className="employee">
         <div className="cards">
-          {employees.map((e) => (
-            <div className="card" key={e._id}>
+          {employees.map((employee) => (
+            <div className="card" key={employee._id}>
               <div>
-                <img src={e.image} alt={e.name} />
+                <img src={employee.image} alt={employee.name} />
               </div>
-              <div>{e.role}</div>
-              <div>{e.name}</div>
-              <div>{e.email}</div>
-              <div>City: {e.city}</div>
-              <div>{e.qualification}</div>
+              <div>{employee.role}</div>
+              <div>{employee.name}</div>
+              <div>{employee.email}</div>
+              <div>City: {employee.city}</div>
+              <div>{employee.qualification}</div>
               <div>
                 experience:
-                {e.experience} years
+                {employee.experience} years
               </div>
-              <div>specialized: {e.specialized}</div>
+              <div>specialized: {employee.specialized}</div>
             </div>
           ))}
         </div>
