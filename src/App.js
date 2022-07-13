@@ -8,6 +8,7 @@ import { Courses } from "../src/components/courses/Courses";
 import { Employees } from "../src/components/employees/Employees";
 import { Login } from "./components/login/Login";
 import { Signup } from "./components/signup/Signup";
+import { Projects } from "./components/projects/Projects";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/employees" element={<Employees />} />
           <Route path="/teachers" element={<Teachers />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/funding" element={<div>Funding</div>} />
           <Route path="/career" element={<div>Career</div>} />
           <Route path="/about" element={<div>About</div>} />

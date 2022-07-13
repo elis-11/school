@@ -28,6 +28,13 @@ export const fetchUsersApi = async () => {
   return response.json();
 };
 
+export const fetchProjectsApi = async ()=> {
+  const response = await fetch(`${API_URL}/projects`, {
+    credentials: "include",
+  })
+  return response.json();
+}
+
 export const checkAuthStatusApi = async () => {
   const response = await fetch(`${API_URL}/users/me`, {
     credentials: "include",

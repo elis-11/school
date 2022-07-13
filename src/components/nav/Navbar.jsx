@@ -45,6 +45,12 @@ export const Navbar = () => {
         Teachers
       </NavLink>
       <NavLink
+        to="/projects"
+        className={(navData) => (navData.isActive ? "active" : "none")}
+      >
+        Projects
+      </NavLink>
+      <NavLink
         to="/funding"
         className={(navData) => (navData.isActive ? "active" : "none")}
       >
