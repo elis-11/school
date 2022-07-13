@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { checkAuthStatusApi, fetchProjectsApi, fetchUsersApi } from "../helpers/apiCalls";
+import { checkAuthStatusApi, fetchUsersApi } from "../helpers/apiCalls";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -48,19 +48,19 @@ export const DataProvider = ({ children }) => {
   //   }
   // }, [user]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      let result = await fetchProjectsApi();
-      if (result.error) {
-        return console.log(result.error);
-      }
-      console.log(result);
-      setProjects(result);
-    };
-    if (user) {
-      fetchData();
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     let result = await fetchProjectsApi();
+  //     if (result.error) {
+  //       return console.log(result.error);
+  //     }
+  //     console.log(result);
+  //     setProjects(result);
+  //   };
+  //   if (user) {
+  //     fetchData();
+  //   }
+  // }, [user]);
 
   useEffect(() => {
     const checkAuthStatus = async () => {
@@ -87,9 +87,9 @@ export const DataProvider = ({ children }) => {
       const teachersApi = await response.json();
       setTeachers(teachersApi);
 
-      // response = await fetch(`${API_URL}/projects`)
-      // const projectsApi = await response.json()
-      // setProjects(projectsApi);
+      response = await fetch(`${API_URL}/projects`)
+      const projectsApi = await response.json()
+      setProjects(projectsApi);
     };
     fetchData();
   }, []);
