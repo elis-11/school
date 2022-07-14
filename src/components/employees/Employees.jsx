@@ -15,11 +15,11 @@ export const Employees = () => {
               <div>
                 <img src={employee.image} alt={employee.name} />
               </div>
-              <div>{employee.role}</div>
+              <div>{employee.qualification}</div>
+              {/* <div>{employee.role}</div> */}
               <div>{employee.name}</div>
               <div>{employee.email}</div>
               <div>City: {employee.city}</div>
-              <div>{employee.qualification}</div>
               <div>
                 experience:
                 {employee.experience} years

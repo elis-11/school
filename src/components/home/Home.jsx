@@ -26,6 +26,7 @@ export const Home = () => {
           <div className="buttons">
             <button className="explore">Explore courses</button>
             <button className="apply">Apply now</button>
+            {/* <button> <a href="/signup">Apply now</a></button> */}
           </div>
           <div className="graduates">
             <p>Our graduates now work at:</p>
@@ -153,7 +154,7 @@ export const Home = () => {
               </p>
               <button>Explore course</button>
               <div className="apply">
-                <a href="/students">Or apply now</a>
+                <a href="/signup">Or apply now</a>
               </div>
             </div>
           </div>
@@ -176,7 +177,7 @@ export const Home = () => {
               </p>
               <button>Explore course</button>
               <div className="apply">
-                <a href="/students">Or apply now</a>
+                <a href="/signup">Or apply now</a>
               </div>
             </div>
           </div>
@@ -199,7 +200,7 @@ export const Home = () => {
               </p>
               <button>Explore course</button>
               <div className="apply">
-                <a href="/students">Or apply now</a>
+                <a href="/signup">Or apply now</a>
               </div>
             </div>
           </div>
@@ -261,7 +262,7 @@ export const Home = () => {
         <div className="instructors">
           <div className="card">
             <img src="images/cards/person008.jpg" alt="card" />
-            <a href="/teachers"> LEAD INSTRUCTORS </a>
+            <a href="/teachers">LEAD INSTRUCTORS</a>
             <p>
               Responsible for teaching you all the relevant skills live on
               camera.

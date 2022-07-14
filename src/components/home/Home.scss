@@ -247,6 +247,10 @@
         width: 20%;
         padding: 2rem;
         margin: 1rem;
+        // display: column;
+        // justify-content: center;
+        // text-align: center;
+        // align-items: center;
 
         -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
 
@@ -271,6 +275,7 @@
 
       a {
         display: flex;
+        justify-content: center;
         font-size: 1.3rem;
         font-weight: bold;
         text-decoration: none;
@@ -289,26 +294,34 @@
     .instructors {
       display: flex;
       justify-content: center;
-      .card {
-        width: 80%;
-        padding: 2rem;
-        margin: 1rem;
-        img {
-          width: 180px;
-          height: 180px;
-          padding-bottom: 2em;
-        }
-        a {
-          font-size: 0.9em;
-          text-decoration: none;
-          color: rgb(95, 95, 95);
-          &:hover {
-            color: white;
+        .card {
+          width: 25%;
+          padding: 1rem;
+          margin: 1rem;
+          // border: 1px solid red;
+          display: column;
+          justify-content: center;
+          align-items: center;
+          place-items: center;
+          img {
+            width: 10rem;
+            height: 10rem;
+            padding-bottom: 2em;
           }
-        }
-        p {
-          font-size: 0.7em;
-        }
+          a {
+            font-size: 1em;
+            display: inline-block;
+            text-decoration: none;
+            color: rgb(95, 95, 95);
+            font-weight: bold;
+            &:hover {
+              color: white;
+            }
+          }
+          p {
+            font-size: 0.7em;
+            padding-bottom: 5rem;
+          }
       }
     }
   }
