@@ -46,9 +46,8 @@ export const Projects = () => {
                 <div className="text">
                   <div>Description: {project.description}</div>
                   <div>Tools: {project.tools}</div>
-                  <div>{project.link}</div>
-                  <div>{project.github}</div>
-                  {/* <NavLink to={`${project.github}`}></NavLink> */}
+                  <div><a href={project.link} target="_blank" rel="noreferrer">{project.link}</a></div>
+                  <div><a href={project.github} target="_blank" rel="noreferrer">{project.github}</a></div>
                 </div>
               </div>
             </div>
