@@ -24,9 +24,16 @@ export const Home = () => {
             up your current career with new, future-proof tech skills.
           </h4>
           <div className="buttons">
-            <button className="explore">Explore courses</button>
-            <button className="apply">Apply now</button>
-            {/* <button> <a href="/signup">Apply now</a></button> */}
+            {/* <button className="explore">Explore courses</button> */}
+            <button className="explore">
+              {" "}
+              <a href="/courses">Explore courses</a>
+            </button>
+            {/* <button className="apply">Apply now</button> */}
+            <button className="explore">
+              {" "}
+              <a href="/signup">Apply now</a>
+            </button>
           </div>
           <div className="graduates">
             <p>Our graduates now work at:</p>

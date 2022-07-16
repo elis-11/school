@@ -44,7 +44,19 @@
           border-radius: 2rem;
           color: white;
           background-color: rgb(207, 207, 207);
+          &:hover {
+            color: rgb(109, 94, 94);
+          }
+        a{
+          color: white;
+          background-color: rgb(207, 207, 207);
+          text-decoration: none;
+          &:hover {
+            color: rgb(109, 94, 94);
+          }
         }
+        }
+
         .apply {
           width: 9rem;
           height: 2.5rem;

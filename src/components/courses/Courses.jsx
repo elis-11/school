@@ -5,7 +5,6 @@ import "./Courses.scss";
 export const Courses = () => {
   const { courses } = useDataContext();
 
-
   return (
     <div>
       <div className="courses">
@@ -14,14 +13,14 @@ export const Courses = () => {
         </div>
         <div className="course">
           <div className="cards">
-            {courses.map((c) => (
-              <div className="card" key={c._id}>
-                <div className="title">{c.title}</div>
+            {courses.map((course) => (
+              <div className="card" key={course._id}>
+                <div className="title">{course.title}</div>
                 <div className="description">
-                  <div className="location">location: {c.location}</div>
-                  <div className="duration">duration: {c.duration}</div>
-                  <div className="education">education: {c.education}</div>
-                  <div className="language">language: {c.language}</div>
+                  <div className="location">location: {course.location}</div>
+                  <div className="duration">duration: {course.duration}</div>
+                  <div className="education">education: {course.education}</div>
+                  <div className="language">language: {course.language}</div>
                 </div>
               </div>
             ))}
