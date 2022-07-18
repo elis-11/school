@@ -1,16 +1,21 @@
 .Teachers {
-    box-sizing: border-box;
-    display: column;
-    justify-content: center;
-    text-align: center;
-    place-items: center;
-    width: 100%;
-    // margin: 2rem;
-    color: rgb(95, 95, 95);
-    .title {
-      color: #000;
+  box-sizing: border-box;
+  display: column;
+  justify-content: center;
+  text-align: center;
+  place-items: center;
+  width: 100%;
+  // margin: 2rem;
+  color: rgb(95, 95, 95);
+  .content {
+    width: 80%;
+    margin: auto;
+    h2 {
+      font-size: 2rem;
     }
-  
+    h3 {
+      padding: 2rem 4rem;
+    }
     .teacher {
       display: flex;
       justify-content: center;
@@ -18,33 +23,43 @@
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        width: 80%;
+        width: 100%;
         .card {
           width: 12rem;
           height: 20rem;
           margin: 1rem;
-          -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
-  
+          -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+            -5px -5px 10px #fff;
+
           -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
-  
+
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
           &:hover {
             -webkit-box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
               inset -15px -15px 20px #fff;
-  
+
             -moz-box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
               inset -15px -15px 20px #fff;
-  
+
             box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.05),
               inset -15px -15px 20px #fff;
           }
-  
+
           img {
             width: 12rem;
             height: 8rem;
             padding-bottom: 1em;
           }
+          .bold {
+            color: rgb(84, 86, 86);
+            font-weight: bold;
+            // color: rgb(163, 162, 162);
+            &:hover {
+              color: rgb(162, 143, 143);
+            }
+          }
         }
       }
     }
   }
+}

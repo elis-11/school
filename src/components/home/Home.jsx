@@ -256,7 +256,7 @@ export const Home = () => {
             <div className="icon">
               <FiUsers />
             </div>
-            <a href="/courses">1 on 1 help when you need it</a>
+            <a href="/teachers">1 on 1 help when you need it</a>
             <p>
               {" "}
               Whenever you need extra help, feel stuck or like you’re falling
