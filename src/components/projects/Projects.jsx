@@ -60,6 +60,11 @@ export const Projects = () => {
                         {project.github}
                       </a>
                     </div>
+                    <div>
+                      <a href={project.backend} target="_blank" rel="noreferrer">
+{project.backend}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
