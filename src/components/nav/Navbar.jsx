@@ -84,7 +84,7 @@ export const Navbar = () => {
         )}
       </div>
 
-      <NavLink className="apply" to="/apply">
+      <NavLink className="apply" to="/signup">
         Apply now
       </NavLink>
     </nav>
