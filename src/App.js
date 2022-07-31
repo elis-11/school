@@ -24,10 +24,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/employees" element={<Employees />} />
           <Route path="/teachers" element={<Teachers />} />
-          {/* <Route path="/users" element={<Users />} /> */}
           <Route path="/projects" element={<Projects />} />
-          <Route path="/funding" element={<div>Funding</div>} />
-          <Route path="/career" element={<div>Career</div>} />
           <Route path="/about" element={<div>About</div>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
@@ -48,7 +45,12 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="*" element={<div>Page does not exist</div>} />
+          <Route
+            path="*"
+            className="not-exist"
+            element={<div>Page does not exist</div>}
+          />
+          {/* <Route path="/career" element={<div>Career</div>} /> */}
         </Routes>
       </main>
     </div>

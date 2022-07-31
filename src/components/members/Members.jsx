@@ -1,24 +1,15 @@
 import { useDataContext } from "../../context/DataProvider";
+import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
 import "./Members.scss";
-import { MdDelete } from "react-icons/md";
 
 export const Members = () => {
-  const { users, filter, setFilter } = useDataContext();
-
-  const onFilterUser = (e) => {
-    setFilter({ ...filter, [e.target.name]: e.target.value });
-  };
+  const { users } = useDataContext();
 
   return (
     <div className="users">
       <form className="filter">
         <div className="name">
-          <input
-            type="text"
-            name="name"
-            placeholder="Search"
-            onChange={onFilterUser}
-          />
+          <input type="text" name="name" placeholder="Search" />
         </div>
       </form>
 
@@ -26,7 +17,7 @@ export const Members = () => {
         <thead>
           <tr>
             <th>
-              Total: {users.length} { users.length === 1 ? "User" : "Users"}
+              Total: {users.length} {users.length === 1 ? "User" : "Users"}
             </th>
             <th>name</th>
             <th>e-mail</th>
@@ -42,7 +33,10 @@ export const Members = () => {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                <MdDelete className="icon"></MdDelete>
+                <div className="icons">
+                  <AiTwotoneEdit className="icon" role="button" tabindex="0" />
+                  <AiFillDelete className="icon" role="button" tabindex="0" />
+                </div>
               </td>
             </tr>
           ))}
