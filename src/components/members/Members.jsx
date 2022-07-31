@@ -1,8 +1,8 @@
 import { useDataContext } from "../../context/DataProvider";
-import "./Users.scss";
-// import { MdDelete } from "react-icons/md";
+import "./Members.scss";
+import { MdDelete } from "react-icons/md";
 
-export const Users = () => {
+export const Members = () => {
   const { users, filter, setFilter } = useDataContext();
 
   const onFilterUser = (e) => {
@@ -42,7 +42,7 @@ export const Users = () => {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                {/* <MdDelete className="icon"></MdDelete> */}
+                <MdDelete className="icon"></MdDelete>
               </td>
             </tr>
           ))}
