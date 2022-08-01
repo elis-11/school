@@ -44,9 +44,10 @@
         height: 2rem;
         margin: 0.3rem;
         border-radius: 2rem;
+        padding-left: 1em;
+        background-color: transparent;
         // place-items: center;
         // justify-content: center;
-        padding-left: 1em;
       }
       button {
         width: 21rem;
@@ -56,6 +57,7 @@
         // place-items: center;
         justify-content: center;
         padding-left: 1em;
+        background-color: transparent;
       }
     }
   }
