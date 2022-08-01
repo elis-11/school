@@ -31,7 +31,7 @@ const {setUser, setErrors}= useDataContext();
     setUser(result)
 
     // navigate("/users", { replace: true });
-    navigate("/",);
+    navigate("/users",);
   };
 
   return (

@@ -28,7 +28,7 @@ export const Login = () => {
     setUser(result);
 
     // navigate("/users", { replace: true });
-    navigate("/");
+    navigate("/users");
   };
 
   return (
