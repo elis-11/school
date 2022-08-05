@@ -1,6 +1,7 @@
 import { useDataContext } from "../../context/DataProvider";
+import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
 import "./Users.scss";
-// import { MdDelete } from "react-icons/md";
+
 
 export const Users = () => {
   const { users, filter, setFilter } = useDataContext();
@@ -42,7 +43,10 @@ export const Users = () => {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                {/* <MdDelete className="icon"></MdDelete> */}
+                <div>
+                  <AiTwotoneEdit />
+                  <AiFillDelete />
+                </div>
               </td>
             </tr>
           ))}
