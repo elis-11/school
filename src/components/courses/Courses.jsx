@@ -13,6 +13,7 @@ export const Courses = () => {
         </div>
         <div className="course">
           <div className="cards">
+            
             {courses.map((course) => (
               <div className="card" key={course._id}>
                 <div className="title">{course.title}</div>
