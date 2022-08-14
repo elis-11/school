@@ -26,7 +26,8 @@ export const Projects = () => {
             {projects.length} {projects.length === 1 ? "Project" : "Projects"}
           </div>
           <div className="cards">
-            {projects.map((project) => (
+            {/* {projects.map((project) => ( */}
+            {projects.reverse().map((project) => (
               <div className="card" key={project._id}>
                 <div className="image">
                   <img
