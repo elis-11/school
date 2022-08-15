@@ -14,14 +14,28 @@
   .build {
     padding: 2rem;
   }
-  .total{
+  .total {
     font-size: 2rem;
     font-weight: bold;
     text-decoration: underline;
   }
   .project {
-    display: flex;
+    display: column;
     justify-content: center;
+    align-items: center;
+    form {
+      display: column;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        margin: 1rem;
+        padding-left: 1em;
+        width: 30%;
+        height: 2rem;
+        background-color: transparent;
+      }
+    }
     .cards {
       display: flex;
       justify-content: space-evenly;
