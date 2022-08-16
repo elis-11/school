@@ -1,10 +1,20 @@
 .users {
-  margin: auto;
-  // .total {
-  //   font-size: 1.5rem;
-  //   text-align: start;
-  //   color: #777;
-  // }
+  // margin: auto;
+display: column;
+justify-content: center;
+width: 100%;
+align-items: center;
+place-items: center;
+
+  .search {
+    input {
+      margin-left: 37%;
+      width: 24%;
+      height: 2.3rem;
+      font-size: 1.2rem;
+      padding-left: 2em;
+    }
+  }
   table {
     width: 100%;
     border-collapse: collapse;
@@ -24,7 +34,7 @@
     }
     td {
       border-bottom: 1px solid #777;
-      padding: .5rem 3rem;
+      padding: 0.5rem 3rem;
     }
     .icon {
       font-size: 1.3rem;
