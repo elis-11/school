@@ -35,7 +35,7 @@ export const Users = () => {
         <thead>
           <tr>
             <th>
-              Total: {users.length} {users.length === 1 ? "User" : "Users"}
+          Total: {users.length} {users.length === 1 ? "User" : "Users"}
             </th>
             <th>name</th>
             <th>e-mail</th>
