@@ -50,6 +50,23 @@ export const Navbar = () => {
       >
         Projects
       </NavLink>
+      {user && (
+        <NavLink
+          to="/users"
+          className={(navData) => (navData.isActive ? "active" : "none")}
+        >
+          Users
+        </NavLink>
+      )}
+      {user?.role === "admin" && (
+        <NavLink
+          to="/members"
+          className={(navData) => (navData.isActive ? "active" : "none")}
+        >
+          Members
+        </NavLink>
+      )}
+
       {/* <NavLink
         to="/signup"
         className={(navData) => (navData.isActive ? "active" : "none")}

@@ -9,6 +9,9 @@ import { Employees } from "../src/components/employees/Employees";
 import { Login } from "./components/login/Login";
 import { Signup } from "./components/signup/Signup";
 import { Projects } from "./components/projects/Projects";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import { Members } from "./components/members/Members";
+import { NotFound } from "./components/NotFound";
 
 function App() {
   return (
@@ -22,13 +25,21 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/employees" element={<Employees />} />
           <Route path="/teachers" element={<Teachers />} />
-          <Route path="/users" element={<Users />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/career" element={<div>Career</div>} />
-          <Route path="/about" element={<div>About</div>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/apply" element={<div>Apply</div>} />
+          <Route path="/users" element={
+            <ProtectedRoute>
+              <Users />
+            </ProtectedRoute>
+          } />
+        <Route path="/members" element={
+          <ProtectedRoute>
+            <Members />
+          </ProtectedRoute>
+        }/>
+        <Route path="*" element={<NotFound/>}/>
         </Routes>
       </main>
     </div>
