@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useDataContext } from "../../context/DataProvider";
 // import {NavLink} from "react-router-dom"
 import "./Projects.scss";
@@ -6,6 +6,7 @@ import "./Projects.scss";
 export const Projects = () => {
   const [search, setSearch] = useState("");
   const { projects } = useDataContext();
+  const inputRef=useRef()
 
   const filteredProgect = projects.filter(
     (project) =>
@@ -35,6 +36,8 @@ export const Projects = () => {
           }}
         >
           <input
+          autoFocus
+          ref={inputRef}
             id="search"
             type="text"
             role="search"

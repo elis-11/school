@@ -1,11 +1,12 @@
 import { useDataContext } from "../../context/DataProvider";
 import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
 import "./Users.scss";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export const Users = () => {
   const { users } = useDataContext();
   const [search, setSearch] = useState("");
+  const inputRef= useRef()
 
   const filteredUsers = users.filter(
     (user) =>
@@ -22,6 +23,8 @@ export const Users = () => {
         }}
       >
         <input
+        autoFocus
+        ref={inputRef}
           id="search"
           type="text"
           role="search"
