@@ -1,5 +1,5 @@
 import { useDataContext } from "../../context/DataProvider";
-import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
+// import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
 import "./Users.scss";
 import { useRef, useState } from "react";
 
@@ -54,10 +54,10 @@ export const Users = () => {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                <div>
+                {/* <div>
                   <AiTwotoneEdit />
                   <AiFillDelete />
-                </div>
+                </div> */}
               </td>
             </tr>
           ))}
