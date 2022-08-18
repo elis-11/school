@@ -1,7 +1,74 @@
-.App {
+*{
   box-sizing: border-box;
-  // text-align: center;
+}
+.App {
+  text-align: center;
   background-color: rgb(245, 241, 241);
   width: 100%;
-  align-items: center;
+  height: 10vh;
+  // margin: auto;
+  .NotFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    .content {
+      display: column;
+      place-items: center;
+      color: white;
+      padding: 3rem;
+      .light {
+        background: radial-gradient(
+          circle closest-corner at 1421px 46px,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.9) 66%
+        );
+
+        // position: absolute;
+        // position:fixed;
+        // top:0px;
+        // left:0px;
+        // height:100%;
+        // width:100%;
+        // background: #2f2e30;
+        // background:
+        // radial-gradient(
+        //  at center, #a0a0a1, #302f30
+        // );
+      }
+      img {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.2s ease-in;
+        border-style: none;
+      }
+      h2 {
+        font-family: -apple-system, BlinkMacSystemFont, San Francisco,
+          Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial,
+          sans-serif;
+        font-weight: bold;
+        font-size: 2.7rem;
+        text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
+      }
+      p {
+        font-size: 0.8rem;
+        padding: 1rem;
+      }
+      a {
+        border-radius: 5px;
+        font-size: 0.7rem;
+        color: rgb(29, 27, 27);
+        background-color: #fff;
+        text-decoration: none;
+        padding: 0.7rem 1.3rem;
+        text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
+        &:hover {
+          box-shadow: 1px 1px 2px white, 0 0 15px white, 0 0 15px white;
+          text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
+        }
+      }
+    }
+  }
 }
