@@ -80,3 +80,21 @@ export const logoutApi = async () => {
   });
   return response.json();
 };
+
+export const updateUserAPI = async (userId, updateData) => {
+  const response = await fetch(`${API_URL}/users/${userId}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updateData),
+  });
+  return response.json();
+};
+
+export const deleteUserApi= async (userId)=>{
+  const response = await fetch(`${API_URL}/users/${userId}`, {
+    method: "DELETE"
+  })
+  return response.json();
+}
