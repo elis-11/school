@@ -21,39 +21,34 @@ export const Navbar = () => {
     <nav>
       <NavLink
         to="/"
-        className={(navData) => (navData.isActive ? "active" : "none")}
+        // className={(navData) => (navData.isActive ? "active" : "none")}
         end
       >
         Home
       </NavLink>
       <NavLink
+        to="/projects"
+      >
+        Projects
+      </NavLink>
+      <NavLink
         to="/courses"
-        className={(navData) => (navData.isActive ? "active" : "none")}
       >
         Courses
       </NavLink>
       <NavLink
         to="employees"
-        className={(navData) => (navData.isActive ? "active" : "none")}
       >
         Employees
       </NavLink>
       <NavLink
         to="teachers"
-        className={(navData) => (navData.isActive ? "active" : "none")}
       >
         Teachers
-      </NavLink>
-      <NavLink
-        to="/projects"
-        className={(navData) => (navData.isActive ? "active" : "none")}
-      >
-        Projects
       </NavLink>
       {user && (
         <NavLink
           to="/users"
-          className={(navData) => (navData.isActive ? "active" : "none")}
         >
           Users
         </NavLink>
@@ -61,7 +56,6 @@ export const Navbar = () => {
       {user?.role === "admin" && (
         <NavLink
           to="/members"
-          className={(navData) => (navData.isActive ? "active" : "none")}
         >
           Members
         </NavLink>
@@ -69,7 +63,6 @@ export const Navbar = () => {
 
       {/* <NavLink
         to="/signup"
-        className={(navData) => (navData.isActive ? "active" : "none")}
       >
         Signup
       </NavLink> */}
