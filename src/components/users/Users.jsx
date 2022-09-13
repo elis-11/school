@@ -1,12 +1,13 @@
 import { useDataContext } from "../../context/DataProvider";
-// import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
+import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
 import "./Users.scss";
-import { useRef, useState } from "react";
+import { useState } from "react";
+import { useRef } from "react";
 
 export const Users = () => {
   const { users } = useDataContext();
   const [search, setSearch] = useState("");
-  const inputRef= useRef()
+  const inputRef= useRef();
 
   const filteredUsers = users.filter(
     (user) =>
@@ -17,28 +18,27 @@ export const Users = () => {
   return (
     <div className="users">
       <form
-        className="search"
         onSubmit={(e) => {
           e.preventDefault();
         }}
       >
         <input
-        autoFocus
-        ref={inputRef}
+          autoFocus
+          ref={inputRef}
           id="search"
           type="text"
           role="search"
           placeholder="Search..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-        />{" "}
+        />
       </form>
 
       <table>
         <thead>
           <tr>
             <th>
-          Total: {users.length} {users.length === 1 ? "User" : "Users"}
+              Total: {users.length} {users.length === 1 ? "User" : "Users"}
             </th>
             <th>name</th>
             <th>e-mail</th>
@@ -46,7 +46,7 @@ export const Users = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredUsers.map((user, _id) => (
+          {filteredUsers.map((user) => (
             <tr key={user._id}>
               <td>
                 <img src={`/images/users/${user.image}`} alt={user.name} />
@@ -54,10 +54,10 @@ export const Users = () => {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                {/* <div>
-                  <AiTwotoneEdit />
-                  <AiFillDelete />
-                </div> */}
+                <div>
+                  {/* <AiTwotoneEdit />
+                  <AiFillDelete /> */}
+                </div>
               </td>
             </tr>
           ))}

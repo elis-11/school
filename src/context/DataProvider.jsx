@@ -1,7 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { checkAuthStatusApi, fetchUsersApi } from "../helpers/apiCalls";
 
-const API_URL = process.env.REACT_APP_API_URL;
+// const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
+
 
 export const DataContext = createContext();
 

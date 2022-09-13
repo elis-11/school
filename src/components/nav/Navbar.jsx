@@ -26,40 +26,12 @@ export const Navbar = () => {
       >
         Home
       </NavLink>
-      <NavLink
-        to="/projects"
-      >
-        Projects
-      </NavLink>
-      <NavLink
-        to="/courses"
-      >
-        Courses
-      </NavLink>
-      <NavLink
-        to="employees"
-      >
-        Employees
-      </NavLink>
-      <NavLink
-        to="teachers"
-      >
-        Teachers
-      </NavLink>
-      {user && (
-        <NavLink
-          to="/users"
-        >
-          Users
-        </NavLink>
-      )}
-      {user?.role === "admin" && (
-        <NavLink
-          to="/members"
-        >
-          Members
-        </NavLink>
-      )}
+      <NavLink to="/projects">Projects</NavLink>
+      <NavLink to="/courses">Courses</NavLink>
+      <NavLink to="employees">Employees</NavLink>
+      <NavLink to="teachers">Teachers</NavLink>
+      {user && <NavLink to="/users">Users</NavLink>}
+      {user?.role === "admin" && <NavLink to="/members">Members</NavLink>}
 
       {/* <NavLink
         to="/signup"

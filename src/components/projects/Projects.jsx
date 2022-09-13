@@ -6,7 +6,7 @@ import "./Projects.scss";
 export const Projects = () => {
   const [search, setSearch] = useState("");
   const { projects } = useDataContext();
-  const inputRef=useRef()
+  const inputRef = useRef();
 
   const filteredProgect = projects.filter(
     (project) =>
@@ -36,8 +36,8 @@ export const Projects = () => {
           }}
         >
           <input
-          autoFocus
-          ref={inputRef}
+            autoFocus
+            ref={inputRef}
             id="search"
             type="text"
             role="search"

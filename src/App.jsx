@@ -1,17 +1,18 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.scss";
-import { Navbar } from "./components/nav/Navbar";
+// import { Navbar } from "./components/nav/Navbar";
 import { Home } from "./components/home/Home";
 import { Teachers } from "./components/teachers/Teachers";
 import { Users } from "./components/users/Users";
-import { Courses } from "../src/components/courses/Courses";
-import { Employees } from "../src/components/employees/Employees";
+import { Courses } from "./components/courses/Courses";
+import { Employees } from "./components/employees/Employees";
 import { Login } from "./components/login/Login";
 import { Signup } from "./components/signup/Signup";
 import { Projects } from "./components/projects/Projects";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { Members } from "./components/members/Members";
 import { NotFound } from "./components/NotFound";
+import { Navbar } from "./components/nav/Navbar";
 
 function App() {
   return (
