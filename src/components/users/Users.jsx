@@ -1,8 +1,6 @@
 import { useDataContext } from "../../context/DataProvider";
-import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
 import "./Users.scss";
-import { useState } from "react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export const Users = () => {
   const { users } = useDataContext();
@@ -54,10 +52,6 @@ export const Users = () => {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                <div>
-                  {/* <AiTwotoneEdit />
-                  <AiFillDelete /> */}
-                </div>
               </td>
             </tr>
           ))}

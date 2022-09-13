@@ -1,7 +1,6 @@
 // const API_URL = process.env.REACT_APP_API_URL;
 const API_URL = import.meta.env.VITE_API_URL;
 
-
 export const fetchEmployeesApi = async () => {
   const response = await fetch(`${API_URL}/employees`, {
     credentials: "include",
@@ -23,19 +22,19 @@ export const fetchTeachersApi = async () => {
   return response.json();
 };
 
+
+export const fetchProjectsApi = async () => {
+  const response = await fetch(`${API_URL}/projects`, {
+    credentials: "include",
+  });
+  return response.json();
+};
 export const fetchUsersApi = async () => {
   const response = await fetch(`${API_URL}/users`, {
     credentials: "include",
   });
   return response.json();
 };
-
-export const fetchProjectsApi = async ()=> {
-  const response = await fetch(`${API_URL}/projects`, {
-    credentials: "include",
-  })
-  return response.json();
-}
 
 export const checkAuthStatusApi = async () => {
   const response = await fetch(`${API_URL}/users/me`, {
@@ -94,9 +93,9 @@ export const updateUserAPI = async (userId, updateData) => {
   return response.json();
 };
 
-export const deleteUserApi= async (userId)=>{
+export const deleteUserApi = async (userId) => {
   const response = await fetch(`${API_URL}/users/${userId}`, {
-    method: "DELETE"
-  })
+    method: "DELETE",
+  });
   return response.json();
-}
+};

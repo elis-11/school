@@ -1,18 +1,34 @@
 import { useDataContext } from "../../context/DataProvider";
 import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
+import { FaTrashAlt } from "react-icons/fa";
 import "./Members.scss";
 import { useRef, useState } from "react";
+import { deleteUserApi } from "../../helpers/apiCalls";
 
 export const Members = () => {
-  const { users } = useDataContext();
+  const {users, setUsers } = useDataContext();
   const [search, setSearch] = useState("");
   const inputRef = useRef();
 
+  //Search
   const filteredUsers = users.filter(
     (user) =>
       user.name.toLowerCase().includes(search.toLowerCase()) ||
       user.email.toLowerCase().includes(search.toLowerCase())
   );
+
+  //Delete
+  const handleDelete = (id) => {
+    const deleteUser = users.filter((user) => user._id !== id);
+    setUsers(deleteUser);
+  };
+  // const handleDelete = async (userId) => {
+  //   const response = await deleteUserApi(userId);
+  //   console.log(response);
+
+  //   const deleteUser = users.filter((_user) => _user._id !== userId);
+  //   setUsers(deleteUser);
+  // };
 
   return (
     <div className="users">
@@ -58,7 +74,12 @@ export const Members = () => {
               <td>
                 <div className="icons">
                   <AiTwotoneEdit className="icon" role="button" tabIndex="0" />
-                  <AiFillDelete className="icon" role="button" tabIndex="0" />
+                  <FaTrashAlt
+                    className="icon"
+                    role="button"
+                    tabIndex="0"
+                    onClick={() => handleDelete(user._id)}
+                  />
                 </div>
               </td>
             </tr>
