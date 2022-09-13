@@ -57,8 +57,8 @@ export const Members = () => {
               <td>{user.email}</td>
               <td>
                 <div className="icons">
-                  <AiTwotoneEdit className="icon" role="button" tabindex="0" />
-                  <AiFillDelete className="icon" role="button" tabindex="0" />
+                  <AiTwotoneEdit className="icon" role="button" tabIndex="0" />
+                  <AiFillDelete className="icon" role="button" tabIndex="0" />
                 </div>
               </td>
             </tr>
