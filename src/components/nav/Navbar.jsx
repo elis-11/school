@@ -35,10 +35,6 @@ export const Navbar = () => {
       <NavLink to="teachers">Teachers</NavLink>
       {user && <NavLink to="/users">Users</NavLink>}
       {user?.role === "admin" && <NavLink to="/members">Members</NavLink>}
-      <a href={CV} download className="btn">
-        {/* <TbDownload>CV</TbDownload> */}
-        Download CV
-      </a>
 
       {/* <NavLink
         to="/signup"
@@ -60,10 +56,18 @@ export const Navbar = () => {
           </NavLink>
         )}
       </div>
-
-      <NavLink className="apply" to="/signup">
-        Apply now
-      </NavLink>
+      <div style={{ display: "flex" }}>
+        <span>
+          <NavLink className="apply" to="/signup">
+            Apply now
+          </NavLink>
+        </span>
+        <span>
+          <a href={CV} download className="apply">
+            Download CV
+          </a>
+        </span>
+      </div>
     </nav>
   );
 };

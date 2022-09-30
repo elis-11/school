@@ -21,9 +21,9 @@ export const Projects = () => {
         Forget exams, build a job-ready projects instead
       </div>
       <div className="build">
-        We hate exams too. The better way is for you to work on real projects
-        starting from the 2nd week of your training. This will give you what
-        employers want to see - a rich portfolio that showcases your skills.
+        The better way is for you to work on real projects starting from the 2nd
+        week of your training. This will give you what employers want to see - a
+        rich portfolio that showcases your skills. We hate exams too much.
       </div>
       <div className="project">
         .
