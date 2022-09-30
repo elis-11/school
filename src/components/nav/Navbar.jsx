@@ -3,6 +3,9 @@ import { useDataContext } from "../../context/DataProvider";
 import { logoutApi } from "../../helpers/apiCalls";
 import { MdPersonOutline } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
+import CV from "../../assets/cv.png";
+import { TbDownload } from "react-icons/tb";
+
 import "./Navbar.scss";
 
 export const Navbar = () => {
@@ -32,6 +35,10 @@ export const Navbar = () => {
       <NavLink to="teachers">Teachers</NavLink>
       {user && <NavLink to="/users">Users</NavLink>}
       {user?.role === "admin" && <NavLink to="/members">Members</NavLink>}
+      <a href={CV} download className="btn">
+        {/* <TbDownload>CV</TbDownload> */}
+        Download CV
+      </a>
 
       {/* <NavLink
         to="/signup"
