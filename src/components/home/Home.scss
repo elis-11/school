@@ -219,7 +219,7 @@
           padding: 1em;
         }
         button {
-          width: 7em;
+          width: 10em;
           height: 2.5rem;
           // margin-left: 1em;
           border-radius: 2rem;
@@ -305,22 +305,24 @@
     }
     .instructors {
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
         .card {
-          width: 25%;
+          width: 24%;
           padding: 1rem;
           margin: 1rem;
           // border: 1px solid red;
-          display: column;
+          display: flex;
+          flex-direction: column;
           justify-content: center;
-          align-items: center;
+          // align-items: center;
           place-items: center;
           img {
-            width: 10rem;
-            height: 10rem;
+            width: 11rem;
+            height: 11rem;
             padding-bottom: 2em;
           }
           a {
+            align-items: center;
             font-size: 1em;
             display: inline-block;
             text-decoration: none;
