@@ -3,7 +3,7 @@ import { useDataContext } from "../../context/DataProvider";
 import { logoutApi } from "../../helpers/apiCalls";
 import { MdPersonOutline } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
-import CV from "../../assets/cv.png";
+import CV from "../../assets/cv.pdf";
 import { TbDownload } from "react-icons/tb";
 
 import "./Navbar.scss";
