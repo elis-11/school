@@ -1,6 +1,5 @@
 import { useDataContext } from "../../context/DataProvider";
 import "./Users.scss";
-import {useNavigate} from "react-router-dom"
 import { useEffect, useRef, useState } from "react";
 import { BsTrash } from "react-icons/bs";
 import { deleteUserApi, fetchUsersApi } from "../../helpers/apiCalls";
@@ -8,13 +7,9 @@ import { deleteUserApi, fetchUsersApi } from "../../helpers/apiCalls";
 export const Users = () => {
   const { user, users, setUsers } = useDataContext();
   const [search, setSearch] = useState("");
-  const navigate = useNavigate()
   const inputRef = useRef();
 
   useEffect(() => {
-    if (!user) {
-      return navigate('/login')
-    }
     const fetchData = async () => {
       let result = await fetchUsersApi();
       if (result.error) {

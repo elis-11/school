@@ -2,13 +2,28 @@ import { useDataContext } from "../../context/DataProvider";
 import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
 import { FaTrashAlt } from "react-icons/fa";
 import "./Members.scss";
-import { useRef, useState } from "react";
-import { deleteUserApi } from "../../helpers/apiCalls";
+import { useEffect, useRef, useState } from "react";
+import { deleteUserApi, fetchUsersApi } from "../../helpers/apiCalls";
 
 export const Members = () => {
-  const {users, setUsers } = useDataContext();
+  const {user, users, setUsers } = useDataContext();
   const [search, setSearch] = useState("");
   const inputRef = useRef();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      let result = await fetchUsersApi();
+      if (result.error) {
+        return console.log(result.error);
+      }
+      console.log(result);
+      setUsers(result);
+    };
+    if (user) {
+      fetchData();
+    }
+  }, [user]);
+
 
   //Search
   const filteredUsers = users.filter(
@@ -18,17 +33,17 @@ export const Members = () => {
   );
 
   //Delete
-  const handleDelete = (id) => {
-    const deleteUser = users.filter((user) => user._id !== id);
-    setUsers(deleteUser);
-  };
-  // const handleDelete = async (userId) => {
-  //   const response = await deleteUserApi(userId);
-  //   console.log(response);
-
-  //   const deleteUser = users.filter((_user) => _user._id !== userId);
+  // const handleDelete = (id) => {
+  //   const deleteUser = users.filter((user) => user._id !== id);
   //   setUsers(deleteUser);
   // };
+  const handleDelete = async (userId) => {
+    const response = await deleteUserApi(userId);
+    console.log(response);
+
+    const deleteUser = users.filter((_user) => _user._id !== userId);
+    setUsers(deleteUser);
+  };
 
   return (
     <div className="users">
