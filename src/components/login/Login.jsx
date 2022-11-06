@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { loginApi } from "../../helpers/apiCalls";
+import { storeUserInLocalStorage } from "../../helpers/LocallStorage";
 import "./Login.scss";
 
 export const Login = () => {
@@ -25,6 +26,7 @@ export const Login = () => {
     }
     console.log(result);
     setErrors("");
+    storeUserInLocalStorage(result)
     setUser(result);
 
     // navigate("/users", { replace: true });
@@ -42,10 +44,10 @@ export const Login = () => {
           <div className="S">A</div>
           <div>
             <div className="title">Login to DCA</div>
-            <input type="text" ref={emailRef} placeholder="E-mail" />
+            <input type="text" ref={emailRef} placeholder="E-mail" defaultValue={"admin@gmail.com"} />
           </div>
           <div>
-            <input type="password" ref={passwordRef} placeholder="Password" />
+            <input type="password" ref={passwordRef} placeholder="Password" defaultValue={"admin"} />
           </div>
           <div>
             <button type="submit">Login</button>

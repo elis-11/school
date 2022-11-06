@@ -4,9 +4,9 @@ import { logoutApi } from "../../helpers/apiCalls";
 import { MdPersonOutline } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
 import CV from "../../assets/cv.pdf";
-import { TbDownload } from "react-icons/tb";
 
 import "./Navbar.scss";
+import { deleteUserInLocalStorage } from "../../helpers/LocallStorage";
 
 export const Navbar = () => {
   const { user, setUser } = useDataContext();
@@ -15,6 +15,7 @@ export const Navbar = () => {
 
   const handleLogout = (e) => {
     e.preventDefault();
+    deleteUserInLocalStorage()
     setUser();
     logoutApi();
     navigate("/login");

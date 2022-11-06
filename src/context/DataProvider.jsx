@@ -1,9 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { checkAuthStatusApi } from "../helpers/apiCalls";
+import { loadUserInLocalStorage } from "../helpers/LocallStorage";
 
 // const API_URL = process.env.REACT_APP_API_URL;
 const API_URL = import.meta.env.VITE_API_URL;
-
 
 export const DataContext = createContext();
 
@@ -11,11 +11,12 @@ export const useDataContext = () => {
   return useContext(DataContext);
 };
 
-
 export const DataProvider = ({ children }) => {
+  const userLs = loadUserInLocalStorage();
+
   const [employees, setEmployees] = useState([]);
   const [courses, setCourses] = useState([]);
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(userLs);
   const [teachers, setTeachers] = useState([]);
   const [users, setUsers] = useState([]);
   const [projects, setProjects] = useState([]);
@@ -85,8 +86,8 @@ export const DataProvider = ({ children }) => {
       const teachersApi = await response.json();
       setTeachers(teachersApi);
 
-      response = await fetch(`${API_URL}/projects`)
-      const projectsApi = await response.json()
+      response = await fetch(`${API_URL}/projects`);
+      const projectsApi = await response.json();
       setProjects(projectsApi);
     };
     fetchData();
