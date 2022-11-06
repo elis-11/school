@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { checkAuthStatusApi, fetchUsersApi } from "../helpers/apiCalls";
+import { checkAuthStatusApi } from "../helpers/apiCalls";
 
 // const API_URL = process.env.REACT_APP_API_URL;
 const API_URL = import.meta.env.VITE_API_URL;
@@ -21,19 +21,19 @@ export const DataProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
   const [errors, setErrors] = useState();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      let result = await fetchUsersApi();
-      if (result.error) {
-        return console.log(result.error);
-      }
-      console.log(result);
-      setUsers(result);
-    };
-    if (user) {
-      fetchData();
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     let result = await fetchUsersApi();
+  //     if (result.error) {
+  //       return console.log(result.error);
+  //     }
+  //     console.log(result);
+  //     setUsers(result);
+  //   };
+  //   if (user) {
+  //     fetchData();
+  //   }
+  // }, [user]);
   // useEffect(() => {
   //   const fetchData = async () => {
   //     let response = await fetch(`${API_URL}/users`);

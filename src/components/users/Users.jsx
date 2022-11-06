@@ -1,17 +1,47 @@
 import { useDataContext } from "../../context/DataProvider";
 import "./Users.scss";
-import { useRef, useState } from "react";
+import {useNavigate} from "react-router-dom"
+import { useEffect, useRef, useState } from "react";
+import { BsTrash } from "react-icons/bs";
+import { deleteUserApi, fetchUsersApi } from "../../helpers/apiCalls";
 
 export const Users = () => {
-  const { users } = useDataContext();
+  const { user, users, setUsers } = useDataContext();
   const [search, setSearch] = useState("");
-  const inputRef= useRef();
+  const navigate = useNavigate()
+  const inputRef = useRef();
+
+  useEffect(() => {
+    if (!user) {
+      return navigate('/login')
+    }
+    const fetchData = async () => {
+      let result = await fetchUsersApi();
+      if (result.error) {
+        return console.log(result.error);
+      }
+      console.log(result);
+      setUsers(result);
+    };
+    if (user) {
+      fetchData();
+    }
+  }, [user]);
 
   const filteredUsers = users.filter(
     (user) =>
       user.name.toLowerCase().includes(search.toLowerCase()) ||
       user.email.toLowerCase().includes(search.toLowerCase())
   );
+  const handleDelete = async (userCopy) => {
+    const response = await deleteUserApi(userCopy._id);
+    console.log(response);
+
+    const usersCopy = users.filter((_user) => {
+      return _user._id !== userCopy._id;
+    });
+    setUsers(usersCopy);
+  };
 
   return (
     <div className="users">
