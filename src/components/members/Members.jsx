@@ -1,6 +1,7 @@
 import { useDataContext } from "../../context/DataProvider";
 import { AiTwotoneEdit, AiFillDelete } from "react-icons/ai";
 import { FaTrashAlt } from "react-icons/fa";
+import { BiSearch } from "react-icons/bi";
 import "./Members.scss";
 import { useEffect, useRef, useState } from "react";
 import { deleteUserApi, fetchUsersApi } from "../../helpers/apiCalls";
@@ -53,17 +54,20 @@ export const Members = () => {
           e.preventDefault();
         }}
       >
+        {/* <BiSearch style={{marginRight:'5.5em'}}/> */}
         <input
           autoFocus
           ref={inputRef}
           id="search"
           type="text"
           role="search"
-          placeholder="Search"
+          placeholder="Search..."
           value={search}
+          style={{marginLeft:'-6em'}}
           onChange={(e) => {
             setSearch(e.target.value);
           }}
+          
         />
       </form>
 
