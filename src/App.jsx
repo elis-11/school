@@ -32,17 +32,23 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/apply" element={<div>Apply</div>} />
-          <Route path="/users" element={
-            <ProtectedRoute>
-              <Users />
-            </ProtectedRoute>
-          } />
-        <Route path="/members" element={
-          <ProtectedRoute>
-            <Members />
-          </ProtectedRoute>
-        }/>
-        <Route path="*" element={<NotFound/>}/>
+          <Route
+            path="/users"
+            element={
+              <ProtectedRoute>
+                <Users />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/members"
+            element={
+              <ProtectedRoute>
+                <Members />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </div>

@@ -15,7 +15,7 @@ export const Navbar = () => {
 
   const handleLogout = (e) => {
     e.preventDefault();
-    deleteUserInLocalStorage()
+    deleteUserInLocalStorage();
     setUser();
     logoutApi();
     navigate("/login");
