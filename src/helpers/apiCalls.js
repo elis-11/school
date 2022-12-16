@@ -29,6 +29,12 @@ export const fetchProjectsApi = async () => {
   });
   return response.json();
 };
+export const fetchChallengesApi = async () => {
+  const response = await fetch(`${API_URL}/challenges`, {
+    credentials: "include",
+  });
+  return response.json();
+};
 export const fetchUsersApi = async () => {
   const response = await fetch(`${API_URL}/users`, {
     credentials: "include",

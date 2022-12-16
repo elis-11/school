@@ -20,6 +20,7 @@ export const DataProvider = ({ children }) => {
   const [teachers, setTeachers] = useState([]);
   const [users, setUsers] = useState([]);
   const [projects, setProjects] = useState([]);
+  const [challenges, setChallenges] = useState([]);
   const [errors, setErrors] = useState();
 
   // useEffect(() => {
@@ -89,6 +90,10 @@ export const DataProvider = ({ children }) => {
       response = await fetch(`${API_URL}/projects`);
       const projectsApi = await response.json();
       setProjects(projectsApi);
+
+      response = await fetch(`${API_URL}/challenges`);
+      const challengesApi = await response.json();
+      setChallenges(challengesApi);
     };
     fetchData();
   }, []);
@@ -106,6 +111,8 @@ export const DataProvider = ({ children }) => {
     setUsers,
     projects,
     setProjects,
+    challenges,
+    setChallenges,
     errors,
     setErrors,
   };

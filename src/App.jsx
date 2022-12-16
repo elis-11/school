@@ -9,6 +9,7 @@ import { Employees } from "./components/employees/Employees";
 import { Login } from "./components/login/Login";
 import { Signup } from "./components/signup/Signup";
 import { Projects } from "./components/projects/Projects";
+import { Challenges } from "./components/challenges/Challenges";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { Members } from "./components/members/Members";
 import { NotFound } from "./components/NotFound";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/employees" element={<Employees />} />
           <Route path="/teachers" element={<Teachers />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/challenges" element={<Challenges />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/apply" element={<div>Apply</div>} />

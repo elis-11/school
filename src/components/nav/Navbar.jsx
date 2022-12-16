@@ -34,6 +34,7 @@ export const Navbar = () => {
       <NavLink to="/courses">Courses</NavLink>
       <NavLink to="employees">Employees</NavLink>
       <NavLink to="teachers">Teachers</NavLink>
+      <NavLink to="/challenges">Challenges</NavLink>
       {user && <NavLink to="/users">Users</NavLink>}
       {user?.role === "admin" && <NavLink to="/members">Members</NavLink>}
 
